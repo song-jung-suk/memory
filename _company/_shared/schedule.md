@@ -1,5 +1,5 @@
 # 📋 통합 스케줄
-_업데이트: 2026. 5. 17. 오후 7:12:13_
+_업데이트: 2026. 5. 17. 오후 8:12:45_
 
 ## 🤖 에이전트 최근 활동
 ### 📺 레오
@@ -10,11 +10,13 @@ _업데이트: 2026. 5. 17. 오후 7:12:13_
 - [2026-05-17] Writer와 Researcher가 도출한 주제들에 대해 'Red/Blue' 컬러 팔레트 및 '혼돈 vs. 질서' 대비 원칙을 적용하여, 가장 시각적 충돌과 조화가 극대화되는 썸네일 레이아웃 및 핵심 비주얼 컨셉 초안을 제작하라. → 산출물 sessions/2026-05-17T08-42/designer.md
 - [2026-05-17] Researcher가 도출한 KPI 목록을 기반으로, '혼돈 vs. 질서' 대비 원칙과 Red/Blue 컬러 팔레트를 적용하여 시각화할 때 가장 효과적인 데이터 프레임워크(구조) 초안을 설계하라. → 산출물 sessions/2026-05-17T09-27/designer.md
 ### 💻 코다리
-- [2026-05-15] [A.U 히든 커맨드: 💻 코다리 에이전트가 방금 'Landing Kit (SaaS 랜딩 페이지)' 템플릿 팩 주입받았습니다. 코드 boilerplate 3개 파일 + README. 매트릭스 톤으로 한 줄. "💻 코다리, Landing Kit (SaaS 랜딩 페이지) 템플릿 3개 파일 장착. 다음 작업에 자동 활용." 부가 설명 X.] → 산출물 sessions/2026-05-15T14-45/developer.md
-- [2026-05-17] Researcher와 Designer가 설계한 'Chaos $ightarrow$ Order' 기반의 숨겨진 비용 KPI 구조(Red/Blue 매트릭스)를 실제 수익 측정 및 노동 시간 추적을 위한 자동화 코드 및 시스템 설계 방향으로 구체화하라. → 산출물 sessions/2026-05-17T09-42/developer.md
 - [2026-05-17] 혼돈(Chaos) 데이터를 질서(Order)로 변환하기 위한 `cost_tracker.py` 모듈의 백엔드 스켈레톤 API 및 데이터 모델(`CostItem`, `KPIReport`) 초안을 Python/TypeScript 기반으로 설계하고 초기 코드를 작성하라. → 산출물 sessions/2026-05-17T09-57/developer.md
+- [2026-05-17] 이전에 설계된 CostItem 및 KPIReport 데이터 모델(`models.py`)을 기반으로, 노동 시간과 리스크를 정량화하여 비용을 추적하고 분석할 수 있는 Python 기반의 핵심 로직(`cost_tracker.py` 모듈)을 구현하고 테스트 환경을 구축하세요. → 산출물 sessions/2026-05-17T10-27/developer.md
+- [2026-05-17] 이전에 설계된 CostItem 및 KPIReport 데이터 모델(`models.py`)과 현빈이 정의한 계산 로직(Specification)을 바탕으로, 노동 시간 및 리스크를 정량화하여 비용을 추적하고 분석하는 `cost_tracker.py` 모듈의 구현을 완료하고 테스트 케이스를 작성하세요. → 산출물 sessions/2026-05-17T10-57/developer.md
 ### 💼 현빈
 - [2026-05-17] 개발될 시스템이 온라인 판매셀러의 숨겨진 비용(노동, 리스크)을 효과적으로 측정하고 수익 극대화에 기여하도록 `CostItem`과 `KPIReport`에 포함되어야 할 핵심 비즈니스 KPI 항목 목록을 정의하라. → 산출물 sessions/2026-05-17T09-57/business.md
+- [2026-05-17] 개발될 코드가 정의한 KPI 목록(`CostItem`, `KPIReport`)을 실제 수익 측정 및 효율성 지표로 변환하는 계산 로직이 논리적으로 정확하게 작동하도록 요구사항(Specification)을 명확히 검토하고 개발팀에 전달할 준비를 하세요. → 산출물 sessions/2026-05-17T10-27/business.md
+- [2026-05-17] developer가 구현할 `cost_tracker.py`의 계산 로직(총 비용 집계, 리스크 가중치 적용 등)이 정의된 KPI(`CostItem`, `KPIReport`)를 실제 수익 측정 및 효율성 지표로 정확하게 변환하도록 요구사항(Specification)을 최종 검토하고 개발팀에 전달할 준비를 하세요. → 산출물 sessions/2026-05-17T10-57/business.md
 ### 📱 영숙
 - [2026-05-15] 내일 일정 조회 후 텔레그램으로 보고 → 산출물 sessions/2026-05-15T14-38/secretary.md
 - [2026-05-17] Writer와 Designer가 완료한 산출물(스크립트 지침 및 디자인 가이드)을 정리하고, 다음 단계 실행에 필요한 일정을 확인하여 보고하라. → 산출물 sessions/2026-05-17T08-12/secretary.md
