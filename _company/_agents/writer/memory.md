@@ -21,3 +21,4 @@ _Writer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 쓰�
 - [2026-05-17] Researcher가 도출한 쇼츠/블로그 주제 후보군 중 가장 잠재력이 높은 주제 1개를 선정하고, 'Chaos $ightarrow$ Order' 프레임워크를 적용하여 최종 스크립트 및 블로그 포스팅 상세 목차를 완성하라. → 산출물 sessions/2026-05-17T09-12/writer.md
 - [2026-05-21] Researcher가 도출한 주제 중 가장 잠재력이 높은 5가지에 대해, 온라인 판매셀러의 불안감(Chaos)을 극대화하고 명확한 해결책(Order)을 제시하는 'Chaos $ightarrow$ Order' 프레임워크를 적용한 후킹 제목과 스크립트 초안을 작성하라. → 산출물 sessions/2026-05-21T01-20/writer.md
 - [2026-05-21] Researcher가 도출한 최우선 콘텐츠 주제 5가지를 선정하고, 각 주제에 대해 'Chaos $ightarrow$ Order' 프레임워크와 Red/Blue 대비 원칙을 적용하여 유튜브 쇼츠용 후킹 제목과 블로그 포스팅 초안(핵심 구조 포함)을 작성하세요. → 산출물 sessions/2026-05-21T01-50/writer.md
+- [2026-05-21] business 에이전트가 도출한 주제 목록을 기반으로, 'Chaos $ightarrow$ Order' 프레임워크에 맞춰 각 콘텐츠의 후킹 문구(Hook)와 핵심 메시지를 작성하라. → 산출물 sessions/2026-05-21T05-35/writer.md
