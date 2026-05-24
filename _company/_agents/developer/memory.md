@@ -12,3 +12,4 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-17] 이전에 설계된 CostItem 및 KPIReport 데이터 모델(`models.py`)과 현빈이 정의한 계산 로직(Specification)을 바탕으로, 노동 시간 및 리스크를 정량화하여 비용을 추적하고 분석하는 `cost_tracker.py` 모듈의 구현을 완료하고 테스트 케이스를 작성하세요. → 산출물 sessions/2026-05-17T10-57/developer.md
 - [2026-05-21] CostItem/KPIReport 기반의 노동 시간 및 리스크 추적 시스템(`cost_tracker.py` 모듈) 구현을 최종 완료하고, 모든 테스트 케이스를 작성하여 데이터 기반 시스템의 완결성을 확보하세요. → 산출물 sessions/2026-05-21T03-05/developer.md
 - [2026-05-21] Designer가 요청한 시각적 에셋 제작 과정이 CostItem/KPIReport 시스템과 정확히 연결되도록 데이터 연동 방안을 최종 점검하고, 썸네일 에셋 제작 프로세스에 필요한 API 또는 스크립트 통합 가능성을 검토하여 보고하라. → 산출물 sessions/2026-05-21T04-50/developer.md
+- [2026-05-21] Designer가 요청한 시각적 에셋 제작 과정이 CostItem/KPIReport 시스템과 정확히 연동되도록 데이터 연동 방안의 기술적 구현 및 API 통합 가능성을 최종 점검하고 보고하라. → 산출물 sessions/2026-05-21T12-09/developer.md
