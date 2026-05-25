@@ -31,3 +31,6 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-25] business 에이전트가 선정한 TOP 1 주제에 맞춰, 확정된 'Chaos $ightarrow$ Order' 디자인 시스템(Red/Blue 원칙)을 적용하여 해당 주제의 유튜브 쇼츠 썸네일 비주얼 에셋 제작을 즉시 착수하라. → 산출물 sessions/2026-05-25T13-10/designer.md
 - [2026-05-25] KPI 데이터에 기반하여 'Chaos $ightarrow$ Order' 디자인 시스템(Red/Blue 원칙)을 적용한 최종 비주얼 컨셉을 확정하고 구도를 적용한다. → 산출물 sessions/2026-05-25T13-54/designer.md
 - [2026-05-25] 최종적으로 확정된 'Chaos $ightarrow$ Order' 디자인 시스템(C1, C2, C3)과 컬러/타이포그래피 가이드라인을 모든 후속 작업의 절대적인 기준으로 정리하여 최종 산출물로 제출하라. → 산출물 sessions/2026-05-25T14-09/designer.md
+- [2026-05-25] 선정된 TOP 1 주제에 대해 'Chaos $ightarrow$ Order' 디자인 시스템(Red/Blue 원칙)을 적용한 최종 비주얼 컨셉을 확정하고, 모든 후속 작업의 절대적인 기준으로 삼아 시각적 에셋 제작을 감독하라. → 산출물 sessions/2026-05-25T14-24/designer.md
+- [2026-05-25] 개발된 코드/템플릿에 대해 'Chaos $ightarrow$ Order' 디자인 시스템(Red/Blue 원칙)이 완벽하게 적용되었는지 검토하고, 기술적 통합의 최종 기준을 확정하라. → 산출물 sessions/2026-05-25T14-54/designer.md
+- [2026-05-25] 확정된 TOP 1 주제에 대해 'Chaos $ightarrow$ Order' 디자인 시스템(Red/Blue 원칙)을 적용한 최종 비주얼 컨셉을 확정하고, 이를 바탕으로 다음 영상에 필요한 모든 시각적 에셋 제작의 절대적인 가이드라인을 제공하라. → 산출물 sessions/2026-05-25T15-09/designer.md
