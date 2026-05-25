@@ -16,7 +16,22 @@ Cost Tracker Module: 노동 시간 및 리스크 기반 비용 추적 시스템 
 """
 import datetime
 from typing import List, Dict, Any
-from models import CostItem, KPIReport # models.py에서 정의된 모델들을 임포트한다고 가정
+from models import CostItem, KPIReport # models.py
+class CostItem:
+    def __init__(self, item_id: str, labor_hours: float, risk_level: int, cost: float):
+        self.item_id = item_id
+        self.labor_hours = labor_hours  # 노동 시간 (Chaos 지표)
+        self.risk_level = risk_level    # 리스크 레벨 (Red 지표)
+        self.cost = cost                # 총 비용
+
+class KPIReport:
+    def __init__(self, report_id: str, kpi_value: float, target: float, status: str):
+        self.report_id = report_id
+        self.kpi_value = kpi_value      # 측정된 성과 (Order 지표)
+        self.target = target           # 목표치
+        self.status = status           # 상태 (Blue/Red)
+
+# 이 파일은 기존에 정의된 모델을 기반으로 확장됩니다.에서 정의된 모델들을 임포트한다고 가정
 
 class CostTracker:
     """
