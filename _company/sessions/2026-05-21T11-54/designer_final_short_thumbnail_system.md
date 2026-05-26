@@ -1,0 +1,1 @@
+# 유튜브 쇼츠 최종 비주얼 시스템: Chaos $\rightarrow$ Order 적용 (Red/Blue 원칙)
