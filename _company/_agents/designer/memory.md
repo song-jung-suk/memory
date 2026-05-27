@@ -59,3 +59,4 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-27] 선택된 최적 컨셉(B: Transparency)과 'Chaos $ightarrow$ Order' 프레임워크를 적용하여, CostItem 기반의 비용 투명성을 시각적으로 가장 효과적으로 전달할 수 있는 유튜브 쇼츠용 이미지 프롬프트(Midjourney/Stable Diffusion 스타일 포함)를 구체적인 레이아웃 및 비주얼 컨셉으로 작성하라. → 산출물 sessions/2026-05-27T00-40/designer.md
 - [2026-05-27] 최적의 시각 컨셉(B: Transparency)과 'Chaos -> Order' 프레임워크를 적용하여, CostItem 기반 비용 투명성을 극대화하는 유튜브 쇼츠용 이미지 프롬프트(Midjourney/Stable Diffusion 스타일 포함) 및 최종 디자인 가이드를 즉시 확정하고 제작을 시작할 것 → 산출물 sessions/2026-05-27T00-59/designer.md
 - [2026-05-27] 최종 확정된 시각 에셋 가이드라인과 이미지 프롬프트(Midjourney/SD 스타일 포함)를 기반으로, CostItem 투명성 시각화에 최적화된 유튜브 쇼츠용 이미지 및 디자인을 즉시 제작하라. → 산출물 sessions/2026-05-27T01-14/designer.md
+- [2026-05-27] 이전 논의에서 확정된 최적의 시각 컨셉(A 또는 B)을 선택하여, CostItem 투명성 시각화에 가장 효과적인 Midjourney/SD 스타일 이미지 프롬프트 제작을 즉시 실행하라. → 산출물 sessions/2026-05-27T01-44/designer.md
