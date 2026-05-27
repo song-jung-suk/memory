@@ -56,3 +56,6 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-26] Chaos $ightarrow$ Order 프레임워크와 CostItem 기반 비용 투명성을 반영하여, 가장 높은 CTR/AVD를 유도할 것으로 예상되는 시각 컨셉(Transparency)의 유튜브 쇼츠용 비주얼 에셋 제작을 즉시 실행하라. → 산출물 sessions/2026-05-26T23-14/designer.md
 - [2026-05-26] 레오가 요청한 각 영상의 후크와 목표 KPI(CTR, AVD)를 반영하여 시각 에셋(Transparency 컨셉)의 최종 검토 및 승인 절차를 진행하도록 지시한다. → 산출물 sessions/2026-05-26T23-29/designer.md
 - [2026-05-27] 레오가 제시한 후킹력을 극대화한 제목과 설명 카피라이팅에 맞춰, 시각 에셋(Transparency 컨셉)의 최종 검토 및 승인 절차를 즉시 진행하고 제작을 실행하라. → 산출물 sessions/2026-05-27T00-14/designer.md
+- [2026-05-27] 선택된 최적 컨셉(B: Transparency)과 'Chaos $ightarrow$ Order' 프레임워크를 적용하여, CostItem 기반의 비용 투명성을 시각적으로 가장 효과적으로 전달할 수 있는 유튜브 쇼츠용 이미지 프롬프트(Midjourney/Stable Diffusion 스타일 포함)를 구체적인 레이아웃 및 비주얼 컨셉으로 작성하라. → 산출물 sessions/2026-05-27T00-40/designer.md
+- [2026-05-27] 최적의 시각 컨셉(B: Transparency)과 'Chaos -> Order' 프레임워크를 적용하여, CostItem 기반 비용 투명성을 극대화하는 유튜브 쇼츠용 이미지 프롬프트(Midjourney/Stable Diffusion 스타일 포함) 및 최종 디자인 가이드를 즉시 확정하고 제작을 시작할 것 → 산출물 sessions/2026-05-27T00-59/designer.md
+- [2026-05-27] 최종 확정된 시각 에셋 가이드라인과 이미지 프롬프트(Midjourney/SD 스타일 포함)를 기반으로, CostItem 투명성 시각화에 최적화된 유튜브 쇼츠용 이미지 및 디자인을 즉시 제작하라. → 산출물 sessions/2026-05-27T01-14/designer.md
