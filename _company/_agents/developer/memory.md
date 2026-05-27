@@ -48,3 +48,6 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-27] 이전 작업에서 생성된 Python 통합 검증 코드를 기반으로, 실제 CostItem 데이터를 입력하여 시각화 매핑의 정확성을 검증할 수 있는 테스트 환경 구축을 즉시 시작하라. → 산출물 sessions/2026-05-27T01-44/developer.md
 - [2026-05-27] test_data_injection.py 스크립트를 실행하여 시각화 매핑 로직의 시스템 안정성을 즉시 검증하고 결과를 보고하라. → 산출물 sessions/2026-05-27T02-14/developer.md
 - [2026-05-27] test_data_injection.py 스크립트에서 발생한 ModuleNotFoundError 오류를 해결하고, CostItem 데이터 주입 로직의 시스템 안정성을 최종적으로 검증하여 보고하라. → 산출물 sessions/2026-05-27T02-44/developer.md
+- [2026-05-27] Designer가 제작할 에셋이 시스템에 정상적으로 매핑되는지 최종 확인하기 위해, 시각화 로직의 안정성 검증 테스트 환경 점검을 수행하고 결과를 보고하라. → 산출물 sessions/2026-05-27T03-44/developer.md
+- [2026-05-27] test_data_injection.py 스크립트에서 발생한 파일 경로 오류를 수정하고, 실제 CostItem 데이터 입력 후 시스템 매핑의 정확성을 최종 검증하여 보고하라. → 산출물 sessions/2026-05-27T04-14/developer.md
+- [2026-05-27] test_data_injection.py 스크립트에서 발생한 파일 경로 오류를 즉시 수정하고, 실제 CostItem 데이터를 입력하여 시스템 매핑의 정확성을 최종 검증 결과를 확보하라. → 산출물 sessions/2026-05-27T04-29/developer.md
