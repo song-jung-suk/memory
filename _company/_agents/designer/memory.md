@@ -70,3 +70,4 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-27] 최종 승인된 비주얼 시스템(`sessions/2026-05-21T11-54/designer_final_visual_specs_B_Transparency.md`)을 기반으로, 다음 주 실행 우선순위(Tier 1) 영상에 필요한 모든 이미지 에셋 제작을 즉시 착수하라. → 산출물 sessions/2026-05-27T04-44/designer.md
 - [2026-05-27] 확정된 시각 가이드라인(`designer_assets_Tier1_Video_Set.md`)을 즉시 기반으로 월요일 영상(Chaos $ightarrow$ Order 집중)의 핵심 이미지 에셋 제작을 시작하고, 코다리로부터 받은 데이터 구조 지침에 따라 제작하세요. → 산출물 sessions/2026-05-27T05-14/designer.md
 - [2026-05-27] 코다리로부터 받은 시스템 안정성 검증 결과를 즉시 반영하여, `designer_assets_Tier1_Video_Set.md`에 명시된 이미지 에셋 제작을 개시하고 월요일 업로드 스케줄에 맞출 수 있도록 작업 우선순위를 설정하라. → 산출물 sessions/2026-05-27T05-29/designer.md
+- [2026-05-29] 시스템 안정성 검증 결과를 바탕으로, 다음 주 Tier 1 영상에 필요한 이미지 에셋 제작을 즉시 시작하고, 기존 시각 전략('Chaos -> Order')을 적용하여 비주얼 작업 우선순위를 설정하라. → 산출물 sessions/2026-05-29T12-34/designer.md
