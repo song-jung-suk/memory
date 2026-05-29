@@ -78,3 +78,7 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-29] 확정된 'Chaos $ightarrow$ Order: 시스템 정복' 시각 전략과 컨셉 1(대각선 분할)을 기반으로 다음 주 Tier 1 영상에 필요한 핵심 이미지 에셋 제작 파이프라인을 즉시 실행하고, Red/Blue 대비를 극대화하여 비주얼을 구현하라. → 산출물 sessions/2026-05-29T14-04/designer.md
 - [2026-05-29] 확정된 'Chaos $ightarrow$ Order: 시스템 정복' 시각 전략과 컨셉 1(대각선 분할), Red/Blue 대비를 기반으로 다음 주 Tier 1 영상에 필요한 핵심 이미지 에셋(`designer_assets_Tier1_Video_Set.md`)을 즉시 생성하고 최종 결과물을 확보하라. → 산출물 sessions/2026-05-29T14-19/designer.md
 - [2026-05-29] 확정된 디자인 시스템(Chaos $ightarrow$ Order: 대각선 분할, Red/Blue 대비 극대화)을 기반으로 다음 주 Tier 1 영상에 필요한 최종 핵심 이미지 에셋을 제작하라. → 산출물 sessions/2026-05-29T14-34/designer.md
+- [2026-05-29] 확정된 디자인 시스템('Chaos $ightarrow$ Order: 대각선 분할', 'Red/Blue 대비 극대화')을 기반으로 다음 주 Tier 1 영상에 필요한 핵심 이미지 에셋 제작을 즉시 실행하고, 컨셉 1(대각선 분할 극대화)에 시각 우선순위를 집중하여 결과물을 생성하라. → 산출물 sessions/2026-05-29T14-49/designer.md
+- [2026-05-29] 확정된 디자인 시스템('Chaos $ightarrow$ Order', 'Red/Blue 대비 극대화', 컨셉 1)을 기반으로 다음 주 Tier 1 영상에 필요한 핵심 이미지 에셋(`designer_assets_Tier1_Video_Set`) 제작을 즉시 실행하고 최종 결과물을 확보하라. → 산출물 sessions/2026-05-29T15-04/designer.md
+- [2026-05-29] 이전 작업에서 확정된 디자인 시스템('Chaos $ightarrow$ Order', 'Red/Blue 대비 극대화', 컨셉 1)을 기반으로, 유튜브 영상에 사용될 최종 핵심 썸네일 제작을 위한 구체적인 디자인 브리프(텍스트 구성, 레이아웃 강조점 포함)를 즉시 확정하고 산출하라. → 산출물 sessions/2026-05-29T15-19/designer.md
+- [2026-05-29] 확정된 디자인 시스템('Chaos $ightarrow$ Order', 'Red/Blue 대비 극대화', 컨셉 1)을 기반으로 유튜브 영상에 사용될 최종 핵심 썸네일 제작을 위한 FIGMA/Photoshop용 상세 레이아웃 시안(V2)을 즉시 생성하라. → 산출물 sessions/2026-05-29T15-34/designer.md
