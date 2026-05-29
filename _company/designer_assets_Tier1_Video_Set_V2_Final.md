@@ -1,17 +1,19 @@
-# Designer Assets Final Set: Tier 1 Video (Chaos -> Order)
-## Visual System Summary
-- **Framework:** Chaos $\rightarrow$ Order (Red/Blue Contrast)
-- **Goal:** Maximize CTR by leveraging visual cognitive dissonance and immediate solution presentation.
-- **Color Palette:** Red (\#FF3B30, Chaos) vs. Blue (\#3B5998, Order).
-- **Layout Strategy:** Diagonal Split or Contrast Framing for high tension and resolution focus.
+# Tier 1 Video Image Asset Production Plan (Chaos -> Order)
+## 목표: 다음 주 Tier 1 영상용 핵심 이미지 에셋 제작 완료
+## 디자인 시스템 적용: Chaos $\rightarrow$ Order 프레임워크 및 Red/Blue 컬러 대비 원칙
+## 컨셉 확정: Concept 1 (대각선 분할 극대화)
+## 데이터 기반 우선순위 설정
+- **우선순위 1 (Critical):** 핵심 시각 충돌을 극대화하는 썸네일 레이아웃 초안 제작 및 최종 비주얼 에셋 확보. (CTR 극대화 집중)
+- **우선순위 2 (High):** 영상 내 주요 전환점(Chaos $\rightarrow$ Order)을 시각적으로 표현하는 핵심 장면(Key Frame) 에셋 제작.
+- **우선순위 3 (Medium):** 보조적인 배경 및 정보 전달용 이미지 에셋 제작.
 
-## Thumbnail Concept Finalization (Selected: Concept 1)
-**Concept Name:** Chaos $\rightarrow$ Order: System Conquest
-**Layout Type:** Diagonal Split
-**Red Zone (Chaos):** 60% - Chaotic, complex visual data (e.g., messy logistics, error codes). Color: \#FF3B30 Red.
-**Blue Zone (Order):** 40% - Clean, organized process flow or clear solution diagram. Color: \#3B5998 Blue.
-**Text Placement:** 'Chaos' zone contains high-tension keywords; 'Order' zone contains definitive solutions.
+## 디자인 시스템 세부 적용 (Concept 1: 대각선 분할)
+- **컬러 매핑:** 'Chaos' 영역은 Red 계열(불안, 혼돈), 'Order' 영역은 Blue 계열(질서, 해결)로 명확히 구분하여 레이아웃에 적용.
+- **레이아웃 원칙:** 이미지 또는 썸네일 내에서 대각선 분할선을 사용하여 시청자의 시선이 Red에서 Blue로 즉각적으로 이동하도록 유도. (Chaos $\rightarrow$ Order 흐름 시각화)
 
-## Asset Creation Priority List
-1. **Thumbnail Set (10 Videos):** Apply Concept 1 layout to all 10 video thumbnails.
-2. **Core Visual Assets:** Create 5 core assets focusing on the Red/Blue visual contrast for immediate use in video editing.
+## 에셋 제작 지침 (Action Items for Image Generation)
+1.  **최종 썸네일 레이아웃 초안:** 대각선 분할을 가장 극적으로 활용하여 Red와 Blue 영역의 명확한 대비를 설정하는 3가지 핵심 레이아웃 예시를 즉시 시각화합니다.
+2.  **핵심 장면 에셋:** 영상의 '혼돈 상태' (Chaos)와 '시스템 정복' (Order)의 감정적 흐름을 가장 잘 포착하는 이미지 프레임을 제작합니다.
+
+## 다음 단계:
+최우선순위 1에 따라, 확정된 디자인 시스템을 적용한 **썸네일 레이아웃 초안 3가지**를 즉시 시각적으로 제시하겠습니다.
