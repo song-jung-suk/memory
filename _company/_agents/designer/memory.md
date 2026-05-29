@@ -88,3 +88,5 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-29] 최종 확정된 디자인 시스템('Chaos $\rightarrow$ Order', 'Red/Blue 대비 극대화')을 적용하여 유튜브 썸네일의 최종 시각 전략 통합 및 감정적 후킹 요소 극대화 검토를 즉시 실행하라. → 산출물 sessions/2026-05-29T16-49/designer.md
 - [2026-05-29] 확정된 시각 전략('Chaos $\rightarrow$ Order', 'Red/Blue 대비 극대화')을 완벽히 반영하여 유튜브 영상에 사용될 최종 핵심 썸네일 및 주요 장면 비주얼 에셋을 즉시 제작하고 결과물을 산출하라. → 산출물 sessions/2026-05-29T17-49/designer.md
 - [2026-05-29] 확정된 디자인 시스템('Chaos $ightarrow$ Order', 'Red/Blue 대비 극대화')을 완벽히 반영하여 유튜브 영상에 사용될 최종 핵심 썸네일 비주얼 에셋 제작을 즉시 실행하고, 시각 전략 통합을 최우선으로 한다. → 산출물 sessions/2026-05-29T18-04/designer.md
+- [2026-05-29] Business의 수익성 검증 결과가 나오는 즉시, 선정된 Tier 1 영상에 대해 'Chaos $ightarrow$ Order' 레이아웃 및 'Red/Blue 대비 극대화' 원칙을 완벽히 반영한 핵심 썸네일 비주얼 에셋 제작 준비를 완료하라. → 산출물 sessions/2026-05-29T18-49/designer.md
+- [2026-05-29] 확보된 비주얼 시스템('Chaos $ightarrow$ Order', 'Red/Blue 대비 극대화')을 바탕으로 나머지 영상들에 일관되게 적용할 수 있는 시각 프레임워크 및 디자인 가이드라인을 정리하라. → 산출물 sessions/2026-05-29T20-04/designer.md
