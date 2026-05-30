@@ -28,3 +28,4 @@ _사용자가 직접 줄을 지우면 그 주장은 다시 미검증 상태로 �
 - [2026-05-30] | **1단계: 후킹 (Chaos)** | 쇼츠 영상의 '후크 스크립트' 및 '시각 컨셉' 확정/제작 | 40% | 초기 도달률 극대화 (CTR) | | _(근거: sessions/2026-05-10T08-44/business.md, sessions/2026-05-21T02-20/business.md)_
 - [2026-05-30] | **2단계: 해결책 제시 (Order)** | CostItem/KPIReport 기반의 '비용 추적 시스템' 콘텐츠 제작 및 상세 블로그 작성 | 40% | 신뢰 구축 및 잠재 고객의 문제 인식 심화 (AVD) | | _(근거: sessions/2026-05-21T03-05/developer.md, sessions/2026-05-17T10-57/business.md)_
 - [2026-05-30] | **3단계: 비교 분석 (Optimization)** | 경쟁사 ROI 비교 데이터 분석 및 Pricing 전략 콘텐츠 제작 | 20% | 구체적인 행동 유도 (Pricing) | | _(근거: sessions/2026-05-21T02-35/business.md)_
+- [2026-05-30] * **근거:** _(근거: sessions/2026-05-17T10-27/business.md, sessions/2026-05-21T02-20/business.md)_
