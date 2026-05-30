@@ -68,3 +68,13 @@ _Writer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 쓰�
 - [2026-05-30] 이전 단계에서 확정된 'Chaos $\rightarrow$ Order QA' 프레임워크와 'Red/Blue 대비 극대화 원칙'을 적용하여, 다음 제작할 콘텐츠(예: 쇼츠 10편 중 다음 주제)에 대한 구체적인 논리 흐름 및 후킹 카피 초안을 작성하라. → 산출물 sessions/2026-05-30T04-49/writer.md
 - [2026-05-30] 이전 단계에서 논의된 'Chaos $ightarrow$ Order QA' 프레임워크와 'Red/Blue 대비 극대화 원칙'을 적용하여, 다음 제작할 콘텐츠에 대한 최종 핵심 카피를 확정하고 Designer에게 전달할 준비를 하라. → 산출물 sessions/2026-05-30T05-04/writer.md
 - [2026-05-30] 가장 효과적인 콘텐츠 제작을 위해 당장 제작할 콘텐츠의 구체적인 주제(제목 또는 핵심 메시지)를 제시하고, 이를 바탕으로 'Chaos $ightarrow$ Order QA' 및 'Red/Blue 대비 극대화 원칙'을 적용한 최종 핵심 카피 초안을 작성하라. → 산출물 sessions/2026-05-30T05-19/writer.md
+- [2026-05-30] 이전 단계에서 확정된 'Chaos $ightarrow$ Order QA' 프레임워크와 'Red/Blue 대비 극대화 원칙'에 따라, 당면한 콘텐츠 주제(Tier 2)에 대한 후킹 강도를 극대화하는 핵심 카피 초안을 즉시 작성하여 제공하라. → 산출물 sessions/2026-05-30T05-49/writer.md
+- [2026-05-30] 이전 논의에서 확정된 'Chaos $ightarrow$ Order QA' 프레임워크와 'Red/Blue 대비 극대화 원칙'을 적용하여, 현재 가장 시급한 콘텐츠 주제(예: 중국 구매대행 마진 확보 방법)에 대한 최종 핵심 카피를 즉시 작성하여 제공하라. → 산출물 sessions/2026-05-30T06-04/writer.md
+- [2026-05-30] Chaos $ightarrow$ Order QA 프레임워크와 Red/Blue 대비 원칙을 적용하여, '거래처 10곳 확보' 목표에 가장 직접적으로 기여할 수 있는 Tier 2 콘텐츠 주제 3가지를 제시하고 각 주제별 핵심 후크 카피 초안을 작성하라. → 산출물 sessions/2026-05-30T06-49/writer.md
+- [2026-05-30] 선정된 '마진 파괴의 근원' 주제에 대해 'Chaos $ightarrow$ Order QA' 프레임워크와 'Red/Blue 대비 극대화 원칙'을 적용하여 최종 영상 스크립트 초안 및 후크 카피를 완성하라. → 산출물 sessions/2026-05-30T07-04/writer.md
+- [2026-05-30] Designer가 선택한 시각 전략에 맞춰, '비효율 강조형' 후크 카피의 AVD 및 CTR 극대화를 위해 텍스트 배치와 대비 원칙(Red/Blue)을 미세 조정하고 최종 레이아웃을 확정할 것. → 산출물 sessions/2026-05-30T07-34/writer.md
+- [2026-05-30] Designer가 제시한 'Chaos $ightarrow$ Order QA' 및 'Red/Blue 대비 극대화 원칙'에 맞춰, 시청자의 심리적 불안감을 수익 해결책으로 전환하는 후킹 카피(후크)를 최종적으로 작성하여 Designer에게 제공할 준비를 하라. → 산출물 sessions/2026-05-30T08-04/writer.md
+- [2026-05-30] Designer가 제시하는 시각 전략(Red/Blue 대비)에 맞춰, CTR 극대화를 위한 후킹 카피의 텍스트 레이아웃 및 강조 포인트를 디자인 실행 단계에서 미세 조정할 수 있도록 상세 스펙을 준비할 것. → 산출물 sessions/2026-05-30T08-19/writer.md
+- [2026-05-30] Designer가 요청한 시각 전략(레이아웃)에 맞춰, 가장 높은 CTR을 유도할 수 있는 핵심 후크 카피와 본문 스펙을 확정하여 Designer에게 전달하라. → 산출물 sessions/2026-05-30T08-34/writer.md
+- [2026-05-30] 최종 핵심 카피와 'Chaos $\rightarrow$ Order QA' 원칙, 'Red/Blue 대비 극대화 원칙'을 반영한 시각 전략을 확정하여 Designer에게 전달할 준비를 하라. → 산출물 sessions/2026-05-30T09-04/writer.md
+- [2026-05-30] Designer가 요청한 Red/Blue 대비 극대화 원칙에 맞춰, 최고 CTR을 유도할 후크 카피와 본문 스펙(Chaos $ightarrow$ Order QA 구조)을 최종 확정하여 제공하라. → 산출물 sessions/2026-05-30T09-34/writer.md
