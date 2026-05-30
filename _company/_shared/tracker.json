@@ -1,0 +1,72 @@
+{
+  "tasks": [
+    {
+      "id": "20260530012857-ci2l",
+      "title": "좌우 분할 비율: 60% Chaos/Red vs 40% Order/Blue가 명확히 구분되는가?",
+      "description": "자동 등록 (Writer 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "writer"
+      ],
+      "createdAt": "2026-05-30T01:28:57.355Z",
+      "status": "done",
+      "sessionDir": "2026-05-30T01-19",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
+      "completedAt": "2026-05-30T01:34:20.419Z"
+    },
+    {
+      "id": "20260530012857-cdfv",
+      "title": "색상 대비: Red와 Blue의 대비가 시각적으로 가장 강렬하게 느껴지는가?",
+      "description": "자동 등록 (Writer 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "writer"
+      ],
+      "createdAt": "2026-05-30T01:28:57.376Z",
+      "status": "done",
+      "sessionDir": "2026-05-30T01-19",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
+      "completedAt": "2026-05-30T01:34:20.439Z"
+    },
+    {
+      "id": "20260530012857-idvm",
+      "title": "폰트 스타일: 좌측은 왜곡되거나 긴장감 있게, 우측은 구조적이고 깔끔한 산세리프체인가?",
+      "description": "자동 등록 (Writer 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "writer"
+      ],
+      "createdAt": "2026-05-30T01:28:57.388Z",
+      "status": "done",
+      "sessionDir": "2026-05-30T01-19",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
+      "completedAt": "2026-05-30T01:34:20.450Z"
+    },
+    {
+      "id": "20260530012857-aa9w",
+      "title": "핵심 메시지: 'Chaos $\\rightarrow$ Order'라는 전환의 흐름이 시각적으로 명확히 전달되는가?",
+      "description": "자동 등록 (Writer 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "writer"
+      ],
+      "createdAt": "2026-05-30T01:28:57.401Z",
+      "status": "done",
+      "sessionDir": "2026-05-30T01-19",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
+      "completedAt": "2026-05-30T01:34:20.461Z"
+    }
+  ]
+}

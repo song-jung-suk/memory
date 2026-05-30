@@ -104,3 +104,12 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-29] Writer로부터 수신된 최종 카피와 'Chaos $\rightarrow$ Order', 'Red/Blue 대비 극대화' 원칙을 적용하여, Tier 1 콘텐츠의 핵심 썸네일 시안을 즉시 제작하고 제시하라. → 산출물 sessions/2026-05-29T23-49/designer.md
 - [2026-05-30] Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용한 핵심 썸네일 시안 제작에 착수할 준비를 하라. → 산출물 sessions/2026-05-30T00-04/designer.md
 - [2026-05-30] Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용한 핵심 썸네일 시안 제작에 착수할 준비를 유지하라. → 산출물 sessions/2026-05-30T00-19/designer.md
+- [2026-05-30] Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용하여 핵심 썸네일 시안 제작에 착수할 준비를 유지하라. → 산출물 sessions/2026-05-30T00-34/designer.md
+- [2026-05-30] Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용한 핵심 썸네일 시안 제작에 착수할 준비를 유지하라. → 산출물 sessions/2026-05-30T00-49/designer.md
+- [2026-05-30] Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $ightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대화)을 적용하여 핵심 썸네일 시안 제작에 착수하고, 결과물에 대한 품질 점검 보고서를 Secretary에게 제공하라. → 산출물 sessions/2026-05-30T01-19/designer.md
+- [2026-05-30] Writer로부터 전달받은 최종 카피를 바탕으로 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 즉시 적용하여 핵심 썸네일 시안 제작을 시작하라. → 산출물 sessions/2026-05-30T02-34/designer.md
+- [2026-05-30] Writer로부터 주제를 받는 즉시, 확정된 시간 배분(60%)과 'Chaos $ightarrow$ Order QA' 원칙을 적용하여 시각 컨셉 제작을 위한 초기 준비 작업을 시작하라. → 산출물 sessions/2026-05-30T03-04/designer.md
+- [2026-05-30] 이전 단계에서 제시된 3가지 핵심 썸네일 컨셉 중 CEO가 최종 선택할 수 있도록, 각 컨셉별로 'Chaos $ightarrow$ Order QA' 프레임워크를 적용하여 Red/Blue 대비 극대화 원칙을 반영한 구체적인 디자인 가이드(색상 코드, 폰트 레퍼런스, 레이아웃 좌표)를 즉시 제작하라. → 산출물 sessions/2026-05-30T03-19/designer.md
+- [2026-05-30] Writer가 제공할 최종 핵심 카피를 기반으로, 'Red/Blue 대비 극대화' 원칙과 AVD 극대화 목표에 초점을 맞춰 가장 효과적인 썸네일 시안 제작을 위한 시각 컨셉을 준비하라. → 산출물 sessions/2026-05-30T03-34/designer.md
+- [2026-05-30] Writer가 제공할 카피를 바탕으로 'Chaos $ightarrow$ Order QA'에 따라 가장 효과적인 시각 컨셉(핵심 썸네일 시안)을 준비하라. (Red/Blue 대비 극대화 원칙 적용) → 산출물 sessions/2026-05-30T03-49/designer.md
+- [2026-05-30] Writer가 제공할 최종 핵심 카피를 기반으로, Red/Blue 대비 극대화 원칙과 Chaos $ightarrow$ Order QA 프레임워크를 적용하여 가장 효과적인 최종 썸네일 시안(Visual Concept)을 제작하라. → 산출물 sessions/2026-05-30T04-04/designer.md
