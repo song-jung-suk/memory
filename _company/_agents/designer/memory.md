@@ -90,3 +90,17 @@ _Designer 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-05-29] 확정된 디자인 시스템('Chaos $ightarrow$ Order', 'Red/Blue 대비 극대화')을 완벽히 반영하여 유튜브 영상에 사용될 최종 핵심 썸네일 비주얼 에셋 제작을 즉시 실행하고, 시각 전략 통합을 최우선으로 한다. → 산출물 sessions/2026-05-29T18-04/designer.md
 - [2026-05-29] Business의 수익성 검증 결과가 나오는 즉시, 선정된 Tier 1 영상에 대해 'Chaos $ightarrow$ Order' 레이아웃 및 'Red/Blue 대비 극대화' 원칙을 완벽히 반영한 핵심 썸네일 비주얼 에셋 제작 준비를 완료하라. → 산출물 sessions/2026-05-29T18-49/designer.md
 - [2026-05-29] 확보된 비주얼 시스템('Chaos $ightarrow$ Order', 'Red/Blue 대비 극대화')을 바탕으로 나머지 영상들에 일관되게 적용할 수 있는 시각 프레임워크 및 디자인 가이드라인을 정리하라. → 산출물 sessions/2026-05-29T20-04/designer.md
+- [2026-05-29] 레오가 제시할 프레임워크(Chaos $ightarrow$ Order, Red/Blue 대비)를 바탕으로 다음 영상에 적용될 최종 핵심 썸네일 시안 제작을 즉시 실행한다. → 산출물 sessions/2026-05-29T20-19/designer.md
+- [2026-05-29] 이전에 정의된 'Chaos $ightarrow$ Order' 시각 전략과 'Red/Blue 대비 극대화' 원칙을 완벽히 반영하여, 다음 콘텐츠(Tier 2 영상)에 대한 최종 핵심 썸네일 디자인 시스템 가이드라인을 바탕으로 실제 시안 제작을 즉시 시작하라. → 산출물 sessions/2026-05-29T20-49/designer.md
+- [2026-05-29] 이전에 확정된 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 시각 전략을 기반으로, Tier 2 콘텐츠에 대한 최종 핵심 썸네일 디자인을 즉시 실행하라. → 산출물 sessions/2026-05-29T21-04/designer.md
+- [2026-05-29] Writer가 제공할 카피에 맞춰, 확정된 디자인 시스템 가이드라인(60:40 분할, Red/Blue 대비)을 실제 시안 제작에 적용하여 최종 핵심 썸네일 시안 제작을 즉시 시작하라. → 산출물 sessions/2026-05-29T21-19/designer.md
+- [2026-05-29] Writer가 제공할 최적화된 제목 및 설명 카피를 기반으로, 이전에 제작된 썸네일 시안 중 가장 높은 CTR을 보장할 것으로 예상되는 디자인을 최종 확정하고 실행하라. → 산출물 sessions/2026-05-29T21-34/designer.md
+- [2026-05-29] Writer가 제공할 최종 카피를 기반으로, 이전에 확정된 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 디자인 시스템을 적용하여 실제 핵심 썸네일 시안 제작을 즉시 시작하라. → 산출물 sessions/2026-05-29T21-49/designer.md
+- [2026-05-29] Writer로부터 최종 카피를 수신하면, 확정된 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 디자인 시스템을 적용하여 핵심 썸네일 시안 제작을 즉시 실행할 준비를 완료하라. → 산출물 sessions/2026-05-29T22-04/designer.md
+- [2026-05-29] Writer로부터 최종 카피를 수신하는 즉시, 확정된 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 디자인 시스템을 적용하여 핵심 썸네일 시안 제작을 시작하라. → 산출물 sessions/2026-05-29T22-19/designer.md
+- [2026-05-29] Writer로부터 최종 카피가 수신되는 즉시, 확정된 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 디자인 시스템을 적용하여 핵심 썸네일 시안 제작을 시작할 준비를 완료하라. → 산출물 sessions/2026-05-29T22-34/designer.md
+- [2026-05-29] Writer가 제공할 최종 카피를 즉시 적용하여 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용한 핵심 썸네일 시안을 생성하고 제시하라. → 산출물 sessions/2026-05-29T22-49/designer.md
+- [2026-05-29] Writer로부터 최종 카피를 수신하는 즉시, 확정된 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용한 핵심 썸네일 시안 생성을 즉시 실행하라. → 산출물 sessions/2026-05-29T23-04/designer.md
+- [2026-05-29] Writer로부터 수신된 최종 카피와 'Chaos $\rightarrow$ Order', 'Red/Blue 대비 극대화' 원칙을 적용하여, Tier 1 콘텐츠의 핵심 썸네일 시안을 즉시 제작하고 제시하라. → 산출물 sessions/2026-05-29T23-49/designer.md
+- [2026-05-30] Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용한 핵심 썸네일 시안 제작에 착수할 준비를 하라. → 산출물 sessions/2026-05-30T00-04/designer.md
+- [2026-05-30] Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $ightarrow$ Order' 및 'Red/Blue 대비 극대화' 원칙을 적용한 핵심 썸네일 시안 제작에 착수할 준비를 유지하라. → 산출물 sessions/2026-05-30T00-19/designer.md
