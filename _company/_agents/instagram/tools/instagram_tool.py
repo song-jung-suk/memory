@@ -96,13 +96,66 @@ def test_connection():
     token = creds["META_ACCESS_TOKEN"]
     biz_id = creds["INSTAGRAM_BUSINESS_ID"]
     
-    if not token or not biz_id:
-        _log("META_ACCESS_TOKEN 또는 INSTAGRAM_BUSINESS_ID가 비어 있습니다. config.md를 먼저 채워주세요.", "warn")
+    if not token:
+        _log("META_ACCESS_TOKEN이 비어 있습니다. config.md를 먼저 채워주세요.", "warn")
         return False
         
+    _log("1단계: 액세스 토큰이 접근 가능한 모든 페이스북 페이지 및 연동된 인스타그램 비즈니스 계정 탐색 중...", "step")
+    # /me/accounts 호출하여 연동 목록 자동 스캔
+    scan_url = f"https://graph.facebook.com/v19.0/me/accounts?fields=name,id,instagram_business_account{{id,username,name}}&access_token={token}"
+    s_code, s_res = make_request(scan_url)
+    
+    found_accounts = []
+    if s_code == 200 and isinstance(s_res, dict) and "data" in s_res:
+        for page in s_res["data"]:
+            page_name = page.get("name")
+            page_id = page.get("id")
+            insta_acc = page.get("instagram_business_account")
+            if insta_acc:
+                found_accounts.append({
+                    "page_name": page_name,
+                    "page_id": page_id,
+                    "insta_id": insta_acc.get("id"),
+                    "insta_username": insta_acc.get("username"),
+                    "insta_name": insta_acc.get("name")
+                })
+                
+    if found_accounts:
+        _log("💡 [지능형 탐색기] 연동 가능한 인스타그램 비즈니스 계정을 발굴했습니다!", "ok")
+        print("\n=======================================================")
+        print(" [발견된 연동 가능 인스타그램 계정 목록]")
+        print("-------------------------------------------------------")
+        for i, acc in enumerate(found_accounts):
+            print(f" {i+1}번 후보:")
+            print(f"   • 페이스북 페이지명: {acc['page_name']} (ID: {acc['page_id']})")
+            print(f"   • 진짜 인스타 비즈니스 ID: {acc['insta_id']} (계정: @{acc['insta_username']})")
+            print("-------------------------------------------------------")
+        print("=======================================================\n")
+        
+        # 만약 현재 입력된 ID가 다르고 첫 번째 인스타 계정이 발견되면 자동 제안
+        best_id = found_accounts[0]["insta_id"]
+        if biz_id != best_id:
+            _log(f"👉 config.md의 INSTAGRAM_BUSINESS_ID를 [{best_id}] 로 변경하여 저장해 주세요!", "ok")
+            _log(f"   (도우미가 이번 테스트만 임시로 발굴해낸 진짜 ID [{best_id}]로 연동 검증을 계속 진행해 드릴게요!)\n", "info")
+            biz_id = best_id
+    else:
+        _log("⚠️  [지능형 탐색기] 토큰이 관리하는 페이스북 페이지 중 연동된 인스타그램 비즈니스 계정을 찾지 못했습니다.", "warn")
+        _log("   인스타그램 계정이 '비즈니스(프로페셔널) 계정'으로 전환되었는지, 페이스북 페이지와 제대로 연결되었는지 반드시 확인해 주세요.", "warn")
+
+    if not biz_id:
+        _log("INSTAGRAM_BUSINESS_ID가 비어 있어 더 이상 테스트를 진행할 수 없습니다.", "err")
+        return False
+
     # Meta Graph API 호출
+    _log(f"2단계: 최종 결정된 인스타그램 비즈니스 ID [{biz_id}]로 연동 검증 수행 중...", "step")
     url = f"https://graph.facebook.com/v19.0/{biz_id}?fields=username,name,biography,followers_count,media_count&access_token={token}"
     code, res = make_request(url)
+    
+    # [폴백 적용] biography 등의 세부 필드 미지원으로 400 에러 발생 시, 필수 기본정보(username, name)로 재조회
+    if code != 200 and isinstance(res, dict) and "biography" in res.get("error", {}).get("message", ""):
+        _log("일부 세부 필드(biography)가 활성화되지 않아 기본 필드(username, name)로 다시 연동을 검증합니다...", "warn")
+        url = f"https://graph.facebook.com/v19.0/{biz_id}?fields=username,name&access_token={token}"
+        code, res = make_request(url)
     
     if code == 200:
         _log(f"인스타그램 연동 확인 성공! 계정명: @{res.get('username')}", "ok")
@@ -111,6 +164,9 @@ def test_connection():
         return True
     else:
         _log(f"인스타그램 연동 실패 (코드 {code}): {res}", "err")
+        if code == 400 and "deprecated" in str(res):
+            _log("\n💡 가이드: 이 에러는 입력하신 ID가 진짜 인스타그램 비즈니스 ID가 아닌 '페이스북 개인 ID'이기 때문에 발생합니다.", "warn")
+            _log("   위에 안내해 드린 [지능형 탐색기]의 진짜 인스타 ID 목록을 확인하여 config.md에 적어주세요.", "warn")
         log_activity("TEST_CONNECTION", "FAILED", f"Error: {res}")
         return False
 
