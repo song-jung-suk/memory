@@ -1,12 +1,12 @@
 {
-  "ceo": "qwen3.5-4b",
-  "youtube": "qwen3.5-4b",
-  "instagram": "qwen3.5-4b",
-  "designer": "qwen3.5-4b",
-  "developer": "qwen3.5-4b",
-  "business": "qwen3.5-4b",
-  "secretary": "qwen3.5-4b",
-  "editor": "qwen3.5-4b",
-  "writer": "qwen3.5-4b",
-  "researcher": "qwen3.5-4b"
+  "ceo": "gemma-2-2b-it",
+  "youtube": "gemma-2-2b-it",
+  "instagram": "gemma-2-2b-it",
+  "designer": "gemma-2-2b-it",
+  "developer": "gemma-2-2b-it",
+  "business": "gemma-2-2b-it",
+  "secretary": "gemma-2-2b-it",
+  "editor": "gemma-2-2b-it",
+  "writer": "gemma-2-2b-it",
+  "researcher": "gemma-2-2b-it"
 }
