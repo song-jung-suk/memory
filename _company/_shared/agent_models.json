@@ -1,9 +1,9 @@
 {
-  "ceo": "google/gemma-4-e2b",
+  "ceo": "qwen3.5-4b",
   "youtube": "qwen3.5-4b",
   "instagram": "qwen3.5-4b",
-  "designer": "google/gemma-4-e2b",
-  "developer": "google/gemma-4-e2b",
+  "designer": "qwen3.5-4b",
+  "developer": "qwen3.5-4b",
   "business": "qwen3.5-4b",
   "secretary": "qwen3.5-4b",
   "editor": "qwen3.5-4b",
