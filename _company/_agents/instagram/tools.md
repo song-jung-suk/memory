@@ -22,29 +22,37 @@ AUTONOMY_LEVEL: 2
 
 ## 사용 가능한 도구
 
-_⚠️ 이 에이전트의 도구는 모두 로드맵 단계입니다. 현재 LLM 추론만 가능하고, 외부 API 호출이나 파일 생성은 아직 동작하지 않습니다._
+_✅ 이 에이전트의 핵심 기능이 실제 파이썬 자동화 스크립트로 구현 완료되었습니다! 설정 파일(`config.md`)에 토큰과 ID를 적은 후 바로 사용하실 수 있습니다._
 
-## 로드맵 (예정)
+### 🧪 `instagram_tool.py --test`
+인스타그램 비즈니스 연동 자가진단 및 계정 상태 점검 도구
+- **동작**: `config.md`에 기입된 시크릿 키들을 읽어, Meta API와의 인증 상태를 검증하고 연결된 프로필 정보를 확인합니다.
 
-### `instagram_account` _(예정)_
-Meta Graph API OAuth (비즈니스 계정)
+### 📊 `instagram_tool.py --insights`
+도달 범위(reach) 및 실시간 유저 참여도 수집 도구
+- **동작**: 일일 도달자 수(reach), 노출 수(impressions), 프로필 조회수(profile_views)를 실시간으로 가져와 데이터 수집을 완수합니다.
 
-- 아직 구현되지 않은 도구입니다. 로드맵에 있으며 향후 버전에서 추가 예정.
+### ✍️ `instagram_tool.py --post`
+인스타그램 피드 이미지 자동 포스팅 도구 (2단계 안전 퍼블리싱)
+- **사용법**: `py -3 instagram_tool.py --post --image <공개 이미지 URL> --caption <게시글 캡션>`
+- **동작**: 
+  1. 제공된 이미지 URL을 기반으로 Meta 서버 측 미디어 컨테이너를 생성(Container ID 획득).
+  2. 획득한 ID로 피드를 안전하게 퍼블리시하여 인스타 계정에 등록합니다.
 
-### `feed_poster` _(예정)_
-피드/스토리/릴스 게시 (Draft → 승인 → 게시)
+---
 
-- 아직 구현되지 않은 도구입니다. 로드맵에 있으며 향후 버전에서 추가 예정.
+## 🛠️ 즉시 실행 가능한 CLI 명령어 안내
 
-### `dm_responder` _(예정)_
-DM·댓글 분류 + 답글 초안
+```bash
+# 1. 연동 확인 및 인증 테스트
+py -3 tools/instagram_tool.py --test
 
-- 아직 구현되지 않은 도구입니다. 로드맵에 있으며 향후 버전에서 추가 예정.
+# 2. 계정 도달 및 분석 인사이트 조회
+py -3 tools/instagram_tool.py --insights
 
-### `insights_pull` _(예정)_
-도달·참여·팔로워 추이
-
-- 아직 구현되지 않은 도구입니다. 로드맵에 있으며 향후 버전에서 추가 예정.
+# 3. 새로운 이미지 피드 자동 발행
+py -3 tools/instagram_tool.py --post --image "https://example.com/demo.jpg" --caption "오늘도 신나는 자동화! #automation"
+```
 
 
 ---

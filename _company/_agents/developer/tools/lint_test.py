@@ -13,6 +13,12 @@ config:
   STRICT       — 'true' 면 첫 실패에서 멈춤. 기본 false (모두 시도)
 """
 import os, sys, json, subprocess, glob
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except AttributeError:
+        pass
 
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -38,7 +44,7 @@ def _load(p):
 def _run(cmd, cwd, timeout=180):
     _log(f"$ {cmd}", "step")
     try:
-        r = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True, timeout=timeout)
+        r = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True, encoding="utf-8", timeout=timeout)
         return r.returncode, (r.stdout or "") + "\n" + (r.stderr or "")
     except subprocess.TimeoutExpired:
         return -1, f"⏱ Timeout ({timeout}s)"
