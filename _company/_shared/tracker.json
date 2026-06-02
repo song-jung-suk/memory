@@ -101,6 +101,51 @@
       "preAlarmsSent": [],
       "evidence": "완료: sessions/2026-05-31T11-33/_report.md\n- 영숙: 영숙, 텔레그램으로 보낸 문화카드 확인 일정 등록해줘!\n\nCEO 종합 요점: 📱 영숙: 작업 시작합니다.\n\n---\n\n## 🔄 텔레그램 문화카드 확인 일정 등록 처리\n\n### 1️⃣ 현재 상태 체크\n\n- **텔레그램 봇 연결:** 비활성 (설정 완료 필요)  \n- **캘린더 데이터:** 구글 캘린더 연동 중 (`hanguosong@gmail.com`)\n- **문화카드 확인 요청일:** [Telegram 메시지 내용 확인 필요]\n\n",
       "completedAt": "2026-05-31T11:38:14.922Z"
+    },
+    {
+      "id": "20260602231503-4nfb",
+      "title": "Business: 타겟별 전략 계획 수립",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-02T23:15:03.553Z",
+      "status": "pending",
+      "sessionDir": "2026-06-02T22-29",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": []
+    },
+    {
+      "id": "20260602231503-0pm9",
+      "title": "Writer: 맞춤 영업 메시지 작성 (3 버전)",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-02T23:15:03.573Z",
+      "status": "pending",
+      "sessionDir": "2026-06-02T22-29",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": []
+    },
+    {
+      "id": "20260602231503-nqcp",
+      "title": "Secretary: 고객 데이터 관리 체계 마련",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-02T23:15:03.584Z",
+      "status": "pending",
+      "sessionDir": "2026-06-02T22-29",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": []
     }
   ]
 }
