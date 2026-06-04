@@ -34,6 +34,12 @@ Meta Graph API 연동 및 계정 테스트
 - `enabled`: true
 - `requires_credentials`: `config.md` 참조
 
+### `instagram_analyzer`
+최근 피드 내용, 댓글, 계정 인사이트 데이터 수집 분석 및 보고 (정기 점검용)
+
+- `enabled`: true
+- `requires_credentials`: `config.md` 및 `secretary/config.md` 참조
+
 
 ## 로드맵 (예정)
 
@@ -42,10 +48,11 @@ DM·댓글 분류 + 답글 초안
 
 - 아직 구현되지 않은 도구입니다. 로드맵에 있으며 향후 버전에서 추가 예정.
 
-### `insights_pull` _(예정)_
+### `insights_pull` _(완료)_
 도달·참여·팔로워 추이
 
-- 아직 구현되지 않은 도구입니다. 로드맵에 있으며 향후 버전에서 추가 예정.
+- `instagram_analyzer` 도구에 통합 구현되어 사용 가능합니다.
+
 
 
 ---
