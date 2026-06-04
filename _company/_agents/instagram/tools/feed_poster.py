@@ -5,6 +5,14 @@ import os, sys, json, time, re
 import argparse
 import requests
 
+# Windows CP949 encoding fix
+if sys.platform.startswith('win'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(HERE, "feed_poster.json")
 
