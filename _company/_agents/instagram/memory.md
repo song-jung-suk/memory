@@ -11,3 +11,4 @@ _Instagram 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-06-04] @dadajikgu 계정 현재 올린 피드/릴스 게시글의 도달수, 참여율, 해시태그 효과 분석 보고 및 자동 배포 준비 → 산출물 sessions/2026-06-04T01-27/instagram.md
 - [2026-06-04] @dadajikgu 계정의 최근 게시글 도달수, 참여율(좋아요/댓글/공유 비율), 해시태그 효과 분석 결과 자동 수집하고 CEO에게 요약 보고서 생성 → 산출물 sessions/2026-06-04T05-28/instagram.md
 - [2026-06-04] @dadajikgu 계정의 최근 피드/릴스 게시글 도달수, 참여율(좋아요/댓글/공유 비율), 해시태그 효과 분석 결과 및 자동 배포 상태 보고 → 산출물 sessions/2026-06-04T12-33/instagram.md
+- [2026-06-04] 📥 새 지식 입수 — **MasterClass — Style Reference**: > Midnight Stage Presence (출처: 00_Raw\2026-06-04\DESIGN__1_.md)
