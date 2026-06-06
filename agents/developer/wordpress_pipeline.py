@@ -18,7 +18,7 @@ if sys.platform.startswith('win'):
 # 1. 설정 로드 모듈
 # -------------------------------------------------------------
 def load_config():
-    config_path = r"E:\work\_agents\developer\config.md"
+    config_path = r"E:\work\_company\_agents\developer\config.md"
     config = {
         "SENDER_EMAIL": "",
         "SENDER_APP_PASSWORD": "",

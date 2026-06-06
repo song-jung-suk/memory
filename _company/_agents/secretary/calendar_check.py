@@ -75,10 +75,16 @@ def get_google_events():
     creds.refresh(Request())
     service = build("calendar", "v3", credentials=creds)
     
-    # Tomorrow starts at 2026-06-01T00:00:00+09:00 (KST is UTC+9) -> 2026-05-31T15:00:00Z
-    # Tomorrow ends at 2026-06-01T23:59:59+09:00 -> 2026-06-01T15:00:00Z
-    time_min = "2026-05-31T15:00:00Z"
-    time_max = "2026-06-01T15:00:00Z"
+    # 실행 시점 기준 KST(한국 표준시, UTC+9) 내일 날짜 범위 계산
+    kst_now = datetime.datetime.utcnow() + datetime.timedelta(hours=9)
+    kst_tomorrow = kst_now + datetime.timedelta(days=1)
+    
+    tomorrow_start = datetime.datetime(kst_tomorrow.year, kst_tomorrow.month, kst_tomorrow.day, 0, 0, 0)
+    tomorrow_end = datetime.datetime(kst_tomorrow.year, kst_tomorrow.month, kst_tomorrow.day, 23, 59, 59)
+    
+    # UTC ISO 포맷으로 변환
+    time_min = (tomorrow_start - datetime.timedelta(hours=9)).isoformat() + "Z"
+    time_max = (tomorrow_end - datetime.timedelta(hours=9)).isoformat() + "Z"
     
     events_result = service.events().list(
         calendarId='primary',
@@ -102,8 +108,10 @@ def get_google_events():
 def main():
     print("=== [영숙] 내일 일정 조회 및 보고 프로세스 ===")
     
-    # Tomorrow is 2026-06-01 (Relative to 2026-05-31 local time)
-    target_date_str = "2026-06-01"
+    # KST 기준 내일 날짜 문자열 동적 계산
+    kst_now = datetime.datetime.utcnow() + datetime.timedelta(hours=9)
+    kst_tomorrow = kst_now + datetime.timedelta(days=1)
+    target_date_str = kst_tomorrow.strftime('%Y-%m-%d')
     
     events = []
     google_success = False
