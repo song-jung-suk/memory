@@ -79,3 +79,4 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-06-04] [A.U 히든 커맨드: 💻 코다리 에이전트가 방금 'Landing Kit (SaaS 랜딩 페이지)' 템플릿 팩 주입받았습니다. 코드 boilerplate 3개 파일 + README. 매트릭스 톤으로 한 줄. "💻 코다리, Landing Kit (SaaS 랜딩 페이지) 템플릿 3개 파일 장착. 다음 작업에 자동 활용." 부가 설명 X.] → 산출물 sessions/2026-06-04T13-23/developer.md
 - [2026-06-04] 이메일 자동화 스크립트 재실행 확인 및 메모리 중복 방지 체크, Ollama/LM Studio 서버 정상성 검증 후 파이프라인 완성 상태 보고 → 산출물 sessions/2026-06-04T14-57/developer.md
 - [2026-06-05] Ollama/LM Studio 서버 상태 점검 및 메모리 제한 해제 후 자동화 스크립트 (auto_planner.py) 재실행을 진행하여 기술적 안정성 확보 → 산출물 sessions/2026-06-05T11-36/developer.md
+- [2026-06-07] trend_sniper.py 분류기 실패 원인을 확인하고, 거래처 데이터 처리를 위한 대체 자바스크립트 구현 후 테스트 → 산출물 sessions/2026-06-07T01-10/developer.md
