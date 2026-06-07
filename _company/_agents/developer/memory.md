@@ -81,3 +81,4 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-06-05] Ollama/LM Studio 서버 상태 점검 및 메모리 제한 해제 후 자동화 스크립트 (auto_planner.py) 재실행을 진행하여 기술적 안정성 확보 → 산출물 sessions/2026-06-05T11-36/developer.md
 - [2026-06-07] trend_sniper.py 분류기 실패 원인을 확인하고, 거래처 데이터 처리를 위한 대체 자바스크립트 구현 후 테스트 → 산출물 sessions/2026-06-07T01-10/developer.md
 - [2026-06-07] trend_sniper.py 분류기 실패 원인 확인 후, 거래처 데이터 처리를 위한 대체 자바스크립트 구현 및 테스트 완료 → 산출물 sessions/2026-06-07T04-49/developer.md
+- [2026-06-07] Ollama 서버 상태 확인 후 auto_planner.py 실행 오류 원인 파악 및 재시도, trend_sniper.py 대신 JavaScript 기반 데이터 처리 스크립트 구현 및 테스트 → 산출물 sessions/2026-06-07T06-19/developer.md
