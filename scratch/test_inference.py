@@ -12,14 +12,14 @@ def test_model(model_name):
     url = "http://127.0.0.1:1234/v1/chat/completions"
     payload = {
         "model": model_name,
-        "messages": [{"role": "user", "content": "반갑다고 1줄로 인사해줘."}],
+        "messages": [{"role": "user", "content": "hello"}],
         "stream": False,
-        "max_tokens": 50
+        "max_tokens": 10
     }
     
     start_time = time.time()
     try:
-        r = requests.post(url, json=payload, timeout=30)
+        r = requests.post(url, json=payload, timeout=5)
         r.raise_for_status()
         elapsed = time.time() - start_time
         print(f"SUCCESS! Time: {elapsed:.2f}s")

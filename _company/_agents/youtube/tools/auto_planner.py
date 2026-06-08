@@ -40,7 +40,13 @@ def main():
         sys.exit(1)
     # 첫 실행 전 trend_sniper.py가 정상 동작하는지 빠르게 검증
     print("🔍 trend_sniper.py 첫 회차 검증 중 (~30초)...")
-    test_proc = subprocess.run([sys.executable, SNIPER_PATH], capture_output=True, text=True, encoding='utf-8', timeout=300)
+    try:
+        test_proc = subprocess.run([sys.executable, SNIPER_PATH], capture_output=True, text=True, encoding='utf-8', timeout=60)
+    except subprocess.TimeoutExpired:
+        print("❌ trend_sniper.py 검증 시간 초과 (60초 초과)")
+        print("   LM Studio에서 모델이 제대로 로드(Active)되었는지, 혹은 하드웨어 응답 속도가 지연되는지 확인하세요.")
+        sys.exit(1)
+
     if test_proc.returncode != 0:
         print(f"❌ trend_sniper.py 검증 실패 (exit {test_proc.returncode})")
         print("   먼저 trend_sniper.py 단독으로 ▶ 실행해서 설정·키워드·LLM 연결 확인 후 재시도.")

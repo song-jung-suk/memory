@@ -13,14 +13,14 @@ async function getTrendData() {
         
         console.log('trend_sniper.js 실행 완료:', JSON.stringify(response.data));
         fs.writeFileSync(
-            `e:/work_company/sessions/trend_sniper_2026-06-07.json`, 
+            `e:/work/_company/sessions/trend_sniper_2026-06-07.json`, 
             JSON.stringify(response.data)
         );
         return true;
     } catch (error) {
         console.error('trend_sniper.js 실행 오류:', error.message);
         fs.writeFileSync(
-            `e:/work_company/sessions/trend_sniper_2026-06-07_error.json`, 
+            `e:/work/_company/sessions/trend_sniper_2026-06-07_error.json`, 
             JSON.stringify({ error: error.message })
         );
         return false;

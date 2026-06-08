@@ -8,6 +8,7 @@ import sys
 import io
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import html as html_lib
 
 # Windows 콘솔 이모지 인코딩 에러 방지
 if sys.platform.startswith('win'):
@@ -60,7 +61,25 @@ def clean_html(raw_html):
     return cleantext.strip()
 
 # -------------------------------------------------------------
-# 3. 워드프레스 최신글 추출 모듈 (WP JSON API 사용)
+# 3. 워드프레스 기존 포스팅 제목 목록 수집 (중복 방지용)
+# -------------------------------------------------------------
+def get_existing_post_titles(blog_url):
+    api_url = f"{blog_url.rstrip('/')}/wp-json/wp/v2/posts?per_page=20"
+    req = urllib.request.Request(
+        api_url, 
+        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+    )
+    try:
+        with urllib.request.urlopen(req) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            titles = [html_lib.unescape(post.get("title", {}).get("rendered", "")) for post in data]
+            return titles
+    except Exception as e:
+        print(f"❌ 기존 포스팅 제목 수집 실패: {e}")
+        return []
+
+# -------------------------------------------------------------
+# 4. 워드프레스 최신글 추출 모듈 (WP JSON API 사용)
 # -------------------------------------------------------------
 def get_latest_wordpress_post(blog_url):
     # wp-json API 엔드포인트
@@ -98,9 +117,9 @@ def get_latest_wordpress_post(blog_url):
         return None
 
 # -------------------------------------------------------------
-# 4. Gemini API를 활용한 콘텐츠 생성 모듈 (REST API 사용)
+# 5. Gemini API를 활용한 콘텐츠 생성 모듈 (REST API 사용)
 # -------------------------------------------------------------
-def generate_contents(post_title, post_link, post_content, api_key):
+def generate_contents(post_title, post_link, post_content, existing_titles, api_key):
     if not api_key or "여기에" in api_key:
         raise ValueError("❌ 유효한 GEMINI_API_KEY가 없습니다. config.md 또는 환경변수를 확인해 주세요.")
 
@@ -144,6 +163,29 @@ def generate_contents(post_title, post_link, post_content, api_key):
      1. **영상 설명문(Video Description):** 시청자의 호기심을 자극하고 본문 블로그 링크({post_link}) 클릭을 강하게 유도하는 간결한 3줄 요약 설명문.
      2. **태그 및 키워드(Tags & Keywords):** 유튜브 검색 상위 노출에 유리한 핵심 태그 10~15개 구성.
      3. **고정 댓글(Pinned Comment) 내용:** 유튜브 영상 업로드 시 댓글 상단에 고정해 둘 문구와 블로그 바로가기 링크({post_link}) 포함.
+
+3. 💡 비서실장 추천: 차기 블로그 포스팅 추천 소재 (3개 세트)
+   - **목적**: 대표님이 다음에 작성할 블로그 글의 영감을 얻기 위해, 타겟 고객이 열광하는 소재를 발굴합니다.
+   - **중요 지침 (중복 절대 방지)**: 아래 나열된 [기존 포스팅 제목 목록]과 절대로 유사하거나 중복되지 않는 새로운 주제를 만드세요.
+   - **키워드 반영**: 아래의 [중국 사입 핵심 키워드 라이브러리] 중 1~2개를 적절히 골라 자연스럽게 조합하여 만드세요.
+   - **작성 포맷 (각 소재별)**:
+     - **추천 주제(제목)**: 호기심을 자극하고 검색 친화적인 SEO 최적화 제목
+     - **기획 의도 및 본문 요약 개요**: 글에 포함해야 할 핵심적인 내용과 소제목 구조를 3~5줄 내외의 깔끔한 개요(아웃라인)로 정리 (본문을 다 작성할 필요는 없으며, 대표님이 이 개요만 보고도 살을 붙여 직접 글을 쓸 수 있도록 아웃라인을 잘 잡아주세요.)
+
+[기존 포스팅 제목 목록]
+{chr(10).join('- ' + t for t in existing_titles) if existing_titles else '- 기존 포스팅 없음'}
+
+[중국 사입 핵심 키워드 라이브러리]
+1. 1688 구매대행 수수료 절감
+2. 중국 배송대행지(배대지) 선택 기준
+3. 한중 FTA 원산지증명서 발급 비용 절약
+4. 중국 사입 통관 절차 및 관세/부가세 계산
+5. 타오바오 이미지 검색 소싱 팁
+6. 지식재산권(상표권) 침해 벌금 예방
+7. KC인증 면제 조건 및 식약처 정밀검사
+8. 1688 카카오페이 결제 수수료 비교
+9. LCL 소량 화물 배송비 아끼는 법
+10. 중국 도매 사이트 비교 (1688 vs 알리바바 vs 타오바오)
 
 ---
 
@@ -249,6 +291,9 @@ def main():
     blog_url = config.get("BLOG_URL", "https://dadajikgu.com")
     print(f"🔗 블로그 수집 대상: {blog_url}")
     
+    existing_titles = get_existing_post_titles(blog_url)
+    print(f"📚 기존 포스팅 {len(existing_titles)}개 수집 완료 (중복 방지 필터 적용)")
+    
     post = get_latest_wordpress_post(blog_url)
     if not post:
         print("❌ 분석할 포스팅을 찾지 못해 종료합니다.")
@@ -267,6 +312,7 @@ def main():
         post["title"], 
         post["link"], 
         post["content"], 
+        existing_titles,
         api_key
     )
     
