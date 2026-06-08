@@ -64,13 +64,14 @@ def clean_html(raw_html):
 # 3. 워드프레스 기존 포스팅 제목 목록 수집 (중복 방지용)
 # -------------------------------------------------------------
 def get_existing_post_titles(blog_url):
+    print("   [1/4] 기존 포스팅 제목 목록 수집 중...")
     api_url = f"{blog_url.rstrip('/')}/wp-json/wp/v2/posts?per_page=20"
     req = urllib.request.Request(
         api_url, 
         headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     )
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=15) as response:
             data = json.loads(response.read().decode('utf-8'))
             titles = [html_lib.unescape(post.get("title", {}).get("rendered", "")) for post in data]
             return titles
@@ -82,6 +83,7 @@ def get_existing_post_titles(blog_url):
 # 4. 워드프레스 최신글 추출 모듈 (WP JSON API 사용)
 # -------------------------------------------------------------
 def get_latest_wordpress_post(blog_url):
+    print("   [2/4] 최신 워드프레스 포스팅 수집 중...")
     # wp-json API 엔드포인트
     api_url = f"{blog_url.rstrip('/')}/wp-json/wp/v2/posts?per_page=1"
     
@@ -91,7 +93,7 @@ def get_latest_wordpress_post(blog_url):
     )
     
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=15) as response:
             data = json.loads(response.read().decode('utf-8'))
             if not data:
                 print("❌ 최신 포스팅이 없습니다.")
@@ -202,6 +204,7 @@ def generate_contents(post_title, post_link, post_content, existing_titles, api_
         ]
     }
     
+    print("   [3/4] Gemini API를 통한 콘텐츠 생성 중 (약 5~10초 소요)...")
     req = urllib.request.Request(
         endpoint,
         data=json.dumps(payload).encode('utf-8'),
@@ -209,7 +212,8 @@ def generate_contents(post_title, post_link, post_content, existing_titles, api_
     )
     
     try:
-        with urllib.request.urlopen(req) as response:
+        # 타임아웃을 120초로 대폭 늘려 안정적으로 마케팅 콘텐츠 생성을 대기합니다.
+        with urllib.request.urlopen(req, timeout=120) as response:
             result = json.loads(response.read().decode('utf-8'))
             text = result['candidates'][0]['content']['parts'][0]['text']
             return text
@@ -269,8 +273,8 @@ def send_email(subject, body_markdown, config):
     msg.attach(MIMEText(html_body, 'html', 'utf-8'))
     
     try:
-        # Gmail SMTP 표준 설정
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        # Gmail SMTP 표준 설정 및 타임아웃 15초 적용
+        server = smtplib.SMTP('smtp.gmail.com', 587, timeout=15)
         server.starttls()
         server.login(sender, password)
         server.sendmail(sender, receiver, msg.as_string())
