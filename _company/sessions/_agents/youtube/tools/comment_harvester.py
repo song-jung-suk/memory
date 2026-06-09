@@ -20,15 +20,18 @@ def _load(p):
         return json.load(f)
 
 def _resolve_channel_id(youtube, handle):
-    h = handle.lstrip("@")
+    h = handle if handle.startswith("@") else "@" + handle
     try:
-        r = youtube.search().list(part="snippet", q=h, type="channel", maxResults=1).execute()
+        r = youtube.channels().list(part="id,snippet,contentDetails", forHandle=h).execute()
         items = r.get("items", [])
         if items:
-            return items[0]["snippet"]["channelId"], items[0]["snippet"]["title"]
+            snippet = items[0].get("snippet", {})
+            content = items[0].get("contentDetails", {})
+            uploads = content.get("relatedPlaylists", {}).get("uploads", "")
+            return items[0]["id"], snippet.get("title", ""), uploads
     except Exception as e:
         print(f"⚠️  {handle} 채널 조회 실패: {e}")
-    return None, None
+    return None, None, None
 
 def main():
     if not os.path.exists(ACCOUNT):
@@ -59,15 +62,36 @@ def main():
 
     harvested = []
     for ch in watched:
-        cid, ctitle = _resolve_channel_id(youtube, ch)
+        cid, ctitle, uploads = _resolve_channel_id(youtube, ch)
         if not cid:
             continue
         print(f"📡 [{ch}] 최근 영상 {vids_per}개 가져오는 중...")
-        sr = youtube.search().list(part="snippet", channelId=cid, maxResults=vids_per,
-                                    order="date", publishedAfter=after, type="video").execute()
-        for it in sr.get("items", []):
-            vid = it["id"]["videoId"]
-            vtitle = it["snippet"]["title"]
+        vids = []
+        if uploads:
+            try:
+                pi_resp = youtube.playlistItems().list(
+                    part="contentDetails,snippet",
+                    playlistId=uploads,
+                    maxResults=max(50, vids_per)
+                ).execute()
+                
+                limit_dt = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=lookback)
+                for it in pi_resp.get("items", []):
+                    snippet = it.get("snippet", {})
+                    cd = it.get("contentDetails", {})
+                    vid = cd.get("videoId", "")
+                    vtitle = snippet.get("title", "")
+                    pub_at = snippet.get("publishedAt", "")
+                    try:
+                        pub_dt = datetime.datetime.fromisoformat(pub_at.replace("Z", "+00:00"))
+                        if pub_dt >= limit_dt:
+                            vids.append((vid, vtitle))
+                    except Exception:
+                        vids.append((vid, vtitle))
+                vids = vids[:vids_per]
+            except Exception as e:
+                print(f"⚠️  플레이리스트 조회 실패: {e}")
+        for vid, vtitle in vids:
             print(f"  💬 {vtitle[:60]}")
             try:
                 cr = youtube.commentThreads().list(part="snippet", videoId=vid,

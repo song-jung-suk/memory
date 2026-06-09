@@ -21,12 +21,12 @@ def _resolve_channel_id(youtube, handle, channel_id):
         return channel_id
     if not handle:
         return None
-    h = handle.lstrip("@")
+    h = handle if handle.startswith("@") else "@" + handle
     try:
-        r = youtube.search().list(part="snippet", q=h, type="channel", maxResults=1).execute()
+        r = youtube.channels().list(part="id", forHandle=h).execute()
         items = r.get("items", [])
         if items:
-            return items[0]["snippet"]["channelId"]
+            return items[0]["id"]
     except Exception as e:
         print(f"⚠️  채널 ID 조회 실패: {e}")
     return None

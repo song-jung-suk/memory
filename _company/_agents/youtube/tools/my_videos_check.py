@@ -33,12 +33,12 @@ def _resolve_channel_id(youtube, handle, channel_id):
         return channel_id
     if not handle:
         return None
-    h = handle.lstrip("@")
+    h = handle if handle.startswith("@") else "@" + handle
     try:
-        r = youtube.search().list(part="snippet", q=h, type="channel", maxResults=1).execute()
+        r = youtube.channels().list(part="id", forHandle=h).execute()
         items = r.get("items", [])
         if items:
-            return items[0]["snippet"]["channelId"]
+            return items[0]["id"]
     except Exception as e:
         print(f"⚠️  채널 ID 조회 실패: {e}")
     return None
@@ -192,17 +192,38 @@ def main():
 
     # === 2. 최근 영상 목록 ===
     print(f"🔍 최근 {lookback}일 영상 가져오는 중...", file=sys.stderr)
-    after = (datetime.datetime.utcnow() - datetime.timedelta(days=lookback)).isoformat("T") + "Z"
-    sr = youtube.search().list(part="snippet", channelId=cid, maxResults=top_n,
-                                order="date", publishedAfter=after, type="video").execute()
-    vids = [(it["id"]["videoId"], it["snippet"]["title"], it["snippet"]["publishedAt"])
-            for it in sr.get("items", [])]
-    if not vids:
-        # Fallback to most recent regardless of lookback window
-        sr = youtube.search().list(part="snippet", channelId=cid, maxResults=top_n,
-                                    order="date", type="video").execute()
-        vids = [(it["id"]["videoId"], it["snippet"]["title"], it["snippet"]["publishedAt"])
-                for it in sr.get("items", [])]
+    uploads_playlist = ch.get("contentDetails", {}).get("relatedPlaylists", {}).get("uploads", "")
+    vids = []
+    if uploads_playlist:
+        try:
+            pi_resp = youtube.playlistItems().list(
+                part="snippet",
+                playlistId=uploads_playlist,
+                maxResults=max(50, top_n)
+            ).execute()
+            
+            limit_dt = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=lookback)
+            raw_vids = []
+            for it in pi_resp.get("items", []):
+                snippet = it.get("snippet", {})
+                vid = snippet.get("resourceId", {}).get("videoId", "")
+                title = snippet.get("title", "")
+                pub_at = snippet.get("publishedAt", "")
+                raw_vids.append((vid, title, pub_at))
+                
+                try:
+                    pub_dt = datetime.datetime.fromisoformat(pub_at.replace("Z", "+00:00"))
+                    if pub_dt >= limit_dt:
+                        vids.append((vid, title, pub_at))
+                except Exception:
+                    vids.append((vid, title, pub_at))
+            
+            if not vids:
+                vids = raw_vids[:top_n]
+            else:
+                vids = vids[:top_n]
+        except Exception as e:
+            print(f"⚠️  플레이리스트 조회 실패: {e}", file=sys.stderr)
     if not vids:
         # v2.89.55 — 빈 영상 시 stderr로. stdout이 비어 있어야 TS shortcut이 실패로 정확히 처리.
         print(f"⚠️  업로드된 영상이 없어요.", file=sys.stderr)

@@ -21,12 +21,12 @@ def _resolve_channel_id(youtube, handle, channel_id):
         return channel_id
     if not handle:
         return None
-    h = handle.lstrip("@")
+    h = handle if handle.startswith("@") else "@" + handle
     try:
-        r = youtube.search().list(part="snippet", q=h, type="channel", maxResults=1).execute()
+        r = youtube.channels().list(part="id", forHandle=h).execute()
         items = r.get("items", [])
         if items:
-            return items[0]["snippet"]["channelId"]
+            return items[0]["id"]
     except Exception as e:
         print(f"⚠️  채널 ID 조회 실패: {e}")
     return None
@@ -77,15 +77,47 @@ def main():
         print("❌ 채널 ID를 찾지 못했어요. youtube_account.json의 핸들/ID 확인.")
         sys.exit(1)
 
+    # uploads playlist ID 구하기 (1 unit 쿼타)
+    uploads_playlist = ""
+    try:
+        ch_res = youtube.channels().list(part="contentDetails", id=cid).execute()
+        if ch_res.get("items"):
+            uploads_playlist = ch_res["items"][0].get("contentDetails", {}).get("relatedPlaylists", {}).get("uploads", "")
+    except Exception as e:
+        print(f"⚠️  채널 메타 조회 실패: {e}")
+
     print(f"🎬 [내 영상 체크] 채널 {handle or cid} 최근 {top_n}개 분석 중...")
-    after = (datetime.datetime.utcnow() - datetime.timedelta(days=lookback)).isoformat("T") + "Z"
-    sr = youtube.search().list(part="snippet", channelId=cid, maxResults=top_n,
-                                order="date", publishedAfter=after, type="video").execute()
-    vids = [(it["id"]["videoId"], it["snippet"]["title"], it["snippet"]["publishedAt"])
-            for it in sr.get("items", [])]
-    if not vids:
-        print(f"⚠️  최근 {lookback}일 안에 업로드한 영상이 없어요.")
-        sys.exit(0)
+    vids = []
+    if uploads_playlist:
+        try:
+            pi_resp = youtube.playlistItems().list(
+                part="snippet",
+                playlistId=uploads_playlist,
+                maxResults=max(50, top_n)
+            ).execute()
+            
+            limit_dt = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=lookback)
+            raw_vids = []
+            for it in pi_resp.get("items", []):
+                snippet = it.get("snippet", {})
+                vid = snippet.get("resourceId", {}).get("videoId", "")
+                title = snippet.get("title", "")
+                pub_at = snippet.get("publishedAt", "")
+                raw_vids.append((vid, title, pub_at))
+                
+                try:
+                    pub_dt = datetime.datetime.fromisoformat(pub_at.replace("Z", "+00:00"))
+                    if pub_dt >= limit_dt:
+                        vids.append((vid, title, pub_at))
+                except Exception:
+                    vids.append((vid, title, pub_at))
+            
+            if not vids:
+                vids = raw_vids[:top_n]
+            else:
+                vids = vids[:top_n]
+        except Exception as e:
+            print(f"⚠️  플레이리스트 조회 실패: {e}")
 
     stats = youtube.videos().list(part="statistics", id=",".join(v[0] for v in vids)).execute()
     sm = {it["id"]: it["statistics"] for it in stats.get("items", [])}

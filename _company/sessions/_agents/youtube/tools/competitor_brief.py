@@ -17,15 +17,18 @@ def _load(p):
         return json.load(f)
 
 def _resolve_channel_id(youtube, handle):
-    h = handle.lstrip("@")
+    h = handle if handle.startswith("@") else "@" + handle
     try:
-        r = youtube.search().list(part="snippet", q=h, type="channel", maxResults=1).execute()
+        r = youtube.channels().list(part="id,snippet,contentDetails", forHandle=h).execute()
         items = r.get("items", [])
         if items:
-            return items[0]["snippet"]["channelId"], items[0]["snippet"]["title"]
+            snippet = items[0].get("snippet", {})
+            content = items[0].get("contentDetails", {})
+            uploads = content.get("relatedPlaylists", {}).get("uploads", "")
+            return items[0]["id"], snippet.get("title", ""), uploads
     except Exception:
         pass
-    return None, None
+    return None, None, None
 
 def _push_telegram(account, text):
     token = (account.get("TELEGRAM_BOT_TOKEN") or "").strip()
@@ -70,14 +73,35 @@ def main():
 
     snapshot = []
     for ch in competitors:
-        cid, ctitle = _resolve_channel_id(youtube, ch)
+        cid, ctitle, uploads = _resolve_channel_id(youtube, ch)
         if not cid:
             print(f"⚠️  {ch} 채널 못 찾음")
             continue
         print(f"🔭 [{ch}] 최근 영상 분석 중...")
-        sr = youtube.search().list(part="snippet", channelId=cid, maxResults=top_n,
-                                    order="viewCount", publishedAfter=after, type="video").execute()
-        ids = [it["id"]["videoId"] for it in sr.get("items", [])]
+        ids = []
+        if uploads:
+            try:
+                pi_resp = youtube.playlistItems().list(
+                    part="contentDetails,snippet",
+                    playlistId=uploads,
+                    maxResults=max(50, top_n)
+                ).execute()
+                
+                limit_dt = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=lookback)
+                for it in pi_resp.get("items", []):
+                    snippet = it.get("snippet", {})
+                    cd = it.get("contentDetails", {})
+                    vid = cd.get("videoId", "")
+                    pub_at = snippet.get("publishedAt", "")
+                    try:
+                        pub_dt = datetime.datetime.fromisoformat(pub_at.replace("Z", "+00:00"))
+                        if pub_dt >= limit_dt:
+                            ids.append(vid)
+                    except Exception:
+                        ids.append(vid)
+                ids = ids[:top_n]
+            except Exception as e:
+                print(f"⚠️  플레이리스트 조회 실패: {e}")
         if not ids:
             continue
         st = youtube.videos().list(part="statistics,snippet", id=",".join(ids)).execute()

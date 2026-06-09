@@ -12,8 +12,9 @@ Requires:  pip install google-api-python-client requests
 import os, json, time, random, datetime, sys, io
 
 # 윈도우 환경 한글 및 이모지 출력 인코딩 오류 방지 (UTF-8 강제)
-sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
-sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(HERE, "trend_sniper.json")
@@ -84,8 +85,8 @@ def main():
         print(f"📡 [{q}] 검색 중...")
         try:
             req = youtube.search().list(
-                part="snippet", q=q, maxResults=5, order="viewCount",
-                publishedAfter=last_month, type="video"
+                part="snippet", q=f"{q} #shorts", maxResults=5, order="viewCount",
+                publishedAfter=last_month, type="video", videoDuration="short"
             )
             res = req.execute()
             for item in res.get('items', []):
@@ -106,10 +107,10 @@ def main():
 [데이터]
 {data_text}
 
-분석해서 마크다운 보고서를 작성하세요. 반드시 3섹션:
-1. 🌍 트렌드 해킹 분석 — 어떤 패턴이 조회수를 끌고 있는지
-2. 🎯 빈집 털기 전략 — 차별화 가능한 틈새 주제
-3. 🎬 파괴적 영상 기획안 — 썸네일 카피, 제목 3개, 후킹 오프닝(첫 5초)
+분석해서 마크다운 보고서를 작성하세요. 각 항목별로 장황한 설명은 배제하고 핵심 위주로 아주 짧고 명료하게(전체 500자 이내) 작성하세요. 반드시 3섹션:
+1. 🌍 트렌드 해킹 분석 — 어떤 패턴이 조회수를 끌고 있는지 (핵심 포인트 2개)
+2. 🎯 빈집 털기 전략 — 차별화 가능한 틈새 주제 (핵심 포인트 2개)
+3. 🎬 파괴적 영상 기획안 — 썸네일 카피 1개, 제목 2개, 후킹 오프닝(첫 5초)
 """
 
     # v2.89.70 — LM Studio (OpenAI 호환 API) + Ollama 둘 다 지원. URL/포트로 자동 감지.
@@ -154,9 +155,9 @@ def main():
                     "model": model,
                     "messages": [{"role": "user", "content": prompt}],
                     "stream": False,
-                    "max_tokens": 2048,
+                    "max_tokens": 512,
                 },
-                timeout=45,
+                timeout=180,
             )
             r.raise_for_status()
             report = r.json().get("choices", [{}])[0].get("message", {}).get("content", "").strip()
@@ -164,7 +165,7 @@ def main():
             r = requests.post(
                 f"{ollama_url}/api/generate",
                 json={"model": model, "prompt": prompt, "stream": False},
-                timeout=45,
+                timeout=180,
             )
             r.raise_for_status()
             report = r.json().get("response", "").strip()
