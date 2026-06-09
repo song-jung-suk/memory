@@ -3,9 +3,9 @@
 duration (e.g. overnight). Reads its config from auto_planner.json."""
 import os, json, time, datetime, subprocess, sys, io
 
-# 윈도우 환경 한글 및 이모지 출력 인코딩 오류 방지 (UTF-8 강제)
-sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
-sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
+# 윈도우 환경 인코딩 오류 방지는 PYTHONIOENCODING 환경변수로 제어하거나 아래 buffer 래핑을 씁니다.
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIG_PATH = os.path.join(HERE, "auto_planner.json")
@@ -41,7 +41,9 @@ def main():
     # 첫 실행 전 trend_sniper.py가 정상 동작하는지 빠르게 검증
     print("🔍 trend_sniper.py 첫 회차 검증 중 (~30초)...")
     try:
-        test_proc = subprocess.run([sys.executable, SNIPER_PATH], capture_output=True, text=True, encoding='utf-8', timeout=60)
+        import os as os_lib
+        sub_env = dict(os_lib.environ, PYTHONIOENCODING="utf-8")
+        test_proc = subprocess.run([sys.executable, SNIPER_PATH], capture_output=True, text=True, encoding='utf-8', env=sub_env, cwd=HERE, timeout=60)
     except subprocess.TimeoutExpired:
         print("❌ trend_sniper.py 검증 시간 초과 (60초 초과)")
         print("   LM Studio에서 모델이 제대로 로드(Active)되었는지, 혹은 하드웨어 응답 속도가 지연되는지 확인하세요.")
@@ -68,7 +70,9 @@ def main():
         elapsed_h = (time.time() - start) / 3600
         print(f"\n[{ts}] 🤖 {loop}회차 트렌드 스나이핑 (가동 {elapsed_h:.1f}시간)")
         try:
-            subprocess.run([sys.executable, SNIPER_PATH], check=False)
+            import os as os_lib
+            sub_env = dict(os_lib.environ, PYTHONIOENCODING="utf-8")
+            subprocess.run([sys.executable, SNIPER_PATH], check=False, env=sub_env, cwd=HERE)
         except Exception as e:
             print(f"❌ 실행 실패: {e}")
         next_at = datetime.datetime.now() + datetime.timedelta(hours=interval_h)
