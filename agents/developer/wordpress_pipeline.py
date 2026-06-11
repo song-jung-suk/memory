@@ -224,8 +224,49 @@ def generate_contents(post_title, post_link, post_content, existing_titles, api_
                 error_details = e.read().decode('utf-8')
                 print(f"🔍 구글 API 에러 상세 내용: {error_details}")
         except Exception as read_err:
-            print(f"에러 바디 읽기 실패: {read_err}")
-        return None
+            pass
+            
+        print("🧠 [Fallback] 로컬 LLM 서버(LM Studio)로 콘텐츠 생성 시도 중...")
+        try:
+            local_url = "http://127.0.0.1:1234/v1/chat/completions"
+            
+            # 활성화된 모델 이름 자동 감지
+            local_model = "qwen3.5-4b"
+            try:
+                model_detect_req = urllib.request.Request("http://127.0.0.1:1234/v1/models")
+                with urllib.request.urlopen(model_detect_req, timeout=5) as m_resp:
+                    m_data = json.loads(m_resp.read().decode('utf-8'))
+                    models = [m["id"] for m in m_data.get("data", [])]
+                    if models:
+                        local_model = models[0]
+            except Exception:
+                pass
+                
+            print(f"   로컬 모델 선택: {local_model}")
+            
+            local_prompt = prompt + "\n\n[중요] 로컬 LLM의 연산 부하를 줄이기 위해 모든 섹션의 분량을 대폭 축소하여 불필요한 설명은 완전히 생략하고 아주 짧고 명료하게 핵심만 작성해 주세요. (인스타 프롬프트 1개, 인스타 캡션 3줄 이내, 유튜브 쇼츠 대본은 Scene 3개 이내, 차기 추천 소재는 1개만 아주 간결하게 답변)"
+            local_payload = {
+                "model": local_model,
+                "messages": [{"role": "user", "content": local_prompt}],
+                "stream": False,
+                "max_tokens": 2048
+            }
+            
+            local_req = urllib.request.Request(
+                local_url,
+                data=json.dumps(local_payload).encode('utf-8'),
+                headers={'Content-Type': 'application/json'}
+            )
+            
+            with urllib.request.urlopen(local_req, timeout=240) as local_resp:
+                local_result = json.loads(local_resp.read().decode('utf-8'))
+                print(f"DEBUG local_result: {json.dumps(local_result, ensure_ascii=False)[:500]}")
+                text = local_result['choices'][0]['message']['content'].strip()
+                print(f"✅ [Fallback] 로컬 LLM으로 콘텐츠 생성 성공! (길이: {len(text)})")
+                return text
+        except Exception as local_err:
+            print(f"❌ [Fallback] 로컬 LLM 생성 실패: {local_err}")
+            return None
 
 # -------------------------------------------------------------
 # 5. 이메일 전송 모듈 (SMTP TLS 사용)
