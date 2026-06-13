@@ -86,3 +86,6 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-06-07] e:\work\_company\sessions 폴더 접근 권한 확인 후 블로그 글 자동 발송 스크립트 재실행 및 랜딩 페이지 내 연결 링크 최적화 (상호 참조성 강화) → 산출물 sessions/2026-06-07T11-19/developer.md
 - [2026-06-09] C:\\Users\\qdson\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\google\\api_core\_python_version_support.py 에러 없이 trend_sniper.py 재시도 및 OLLAMA 메모리 8GB 이상 설정 후 LLM 연결 정상 검증 → 산출물 sessions/2026-06-09T03-29/developer.md
 - [2026-06-13] WP CLI 스크립트로 블로그 초안 자동 게시 및 애드센스 승인 상태 모니터링 설정 코드 작성 → 산출물 sessions/2026-06-13T00-55/developer.md
+- [2026-06-13] WP CLI 스크립트(post_publisher.py)로 '애드센스 승인' 및 '중국 소싱' 원고 초안을 자동 게시하고 애드센스 모니터링 설정 활성화 → 산출물 sessions/2026-06-13T02-08/developer.md
+- [2026-06-13] Gemma/Qwen2.5 기반 중국 소싱 AI 자동화 세팅 스크립트 작성 및 테스트 (API 연결, 자동 응답 로직) → 산출물 sessions/2026-06-13T05-38/developer.md
+- [2026-06-13] trend_sniper.py 검증 시간 초과 원인 분석, OLLAMA 메모리 재설정(8GB 이상), 로컬 API 호출 최적화 스크립트 작성 및 테스트 → 산출물 sessions/2026-06-13T09-23/developer.md

@@ -21,3 +21,4 @@ _사용자가 직접 줄을 지우면 그 주장은 다시 미검증 상태로 �
 - [2026-05-30] * 이미지 에셋 생성 파이프라인의 안정성이 최종적으로 유지되고 있음을 확인했습니다. 이는 Designer와 코다리의 동기화된 검증을 통해 보장됩니다. _(근거: sessions/2026-05-17T10-27/developer.md, sessions/2026-05-17T10-57/developer.md)_
 - [2026-05-30] 12 * `sessions/2026-05-27T04-14/developer.md` 및 `sessions/2026-05-27T04-29/developer.md`에 기록된 대로, KPI 데이터와 디자인 시스템 간의 연동 로직은 **안정적으로 확인**되었습니다. 파일 경로 오류는 복구되었으며, 입력 데이터가 시스템에 정상적으로 매핑됨을 확인했습니다. _(근거: sessions/2026-05-27T04-14/developer.md, sessions/2026-05-27T04-29/developer.md)_
 - [2026-05-30] 14 * 이미지 에셋 생성 파이프라인의 안정성이 최종적으로 유지되고 있음을 확인했습니다. 이는 Designer와 코다리의 동기화된 검증을 통해 보장됩니다. _(근거: sessions/2026-05-17T10-27/developer.md, sessions/2026-05-17T10-57/developer.md)_
+- [2026-06-13] **검증된 지식**: 이전 세션에서 Gemma/Qwen2.5 기반 자동화 스크립트 작성 및 테스트 완료 ((file://E:\work\_company\sessions\2026-06-13T05-38\developer.md)) _(근거: sessions/2026-06-13T05-38/developer.md)_
