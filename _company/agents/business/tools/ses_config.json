@@ -1,0 +1,6 @@
+{
+    "SES_API_KEY": "YOUR_AWS_ACCESS_KEY",
+    "AWS_SECRET_KEY": "YOUR_AWS_SECRET_KEY",
+    "EMAIL_FROM": "josephsong332@gmail.com",
+    "EMAIL_TO_DOMAIN": "*.company.com"
+}
