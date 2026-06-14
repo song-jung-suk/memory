@@ -90,3 +90,5 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-06-13] Gemma/Qwen2.5 기반 중국 소싱 AI 자동화 세팅 스크립트 작성 및 테스트 (API 연결, 자동 응답 로직) → 산출물 sessions/2026-06-13T05-38/developer.md
 - [2026-06-13] trend_sniper.py 검증 시간 초과 원인 분석, OLLAMA 메모리 재설정(8GB 이상), 로컬 API 호출 최적화 스크립트 작성 및 테스트 → 산출물 sessions/2026-06-13T09-23/developer.md
 - [2026-06-13] 올라마 메모리 8GB 이상 설정 검증 및 재실행, 인증서 검사 로직 구현 후 API 테스트 재시작 → 산출물 sessions/2026-06-13T11-08/developer.md
+- [2026-06-14] Ollama 서버 메모리 8GB 이상 설정 검증 후 trend_sniper.py 시간 초과 오류 해결 및 자동화 스크립트 재실행 → 산출물 sessions/2026-06-14T07-42/developer.md
+- [2026-06-14] WordPress 관리자 권한으로 WP CLI 명령('wp post insert')을 실행하여 Writer 의 SEO 최적화 원고를 자동 게시하고 게시 ID 반환 → 산출물 sessions/2026-06-14T12-42/developer.md
