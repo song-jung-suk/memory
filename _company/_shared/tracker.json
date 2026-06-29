@@ -169,6 +169,91 @@
       "preAlarmsSent": [],
       "evidence": "완료: sessions/2026-06-06T04-56/_report.md\n- Writer: 다다직구 워드프레스 블로그용 중국 구매셀러 타겟 핵심 키워드 10개(예: '중국 배송대행 추천', '1688 도매 소싱', '통관 가이드' 등)\n- 현빈: 초기 상담 완료 중국 구매셀러 3 곳에게 통관 가이드 강조 이메일 발송 실행 및 거래처 추가 확보 진행 — 브랜드 컬러 가이드 준수하여 메일 초\n- 레오: 1688 결제, 카카오페이로 1분 컷? 수수료 폭탄 피하는 법! 영상(3회 조회수)의 후킹 패턴 분석을 바탕으로 다음 쇼츠 대본 초안 작성 — \n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### ✍️ Writer _(Copywriter)_\n> 📋 **지시**: 다다직구 워드프레스 블로그용 중국 구매셀러 타겟 핵심 키워드 10개(예: '중국 배송대행 추천', '1688 도매 소싱', '통관 가이드' 등)를 기준으로 고품질 원소스 멀티유즈(OSMU) 기획 초안 작성 — 검색엔진 최적화(SEO) 원칙 ",
       "completedAt": "2026-06-06T06:37:26.890Z"
+    },
+    {
+      "id": "20260627122309-hjux",
+      "title": "Checkout 페이지 단순화 (1 단계 결제)",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-27T12:23:09.949Z",
+      "status": "done",
+      "sessionDir": "2026-06-27T11-23",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-27T11-23/_report.md\n- Writer: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n- 현빈: Stripe 전환 후 예상 고객 수 (LTV 기반) 계산하여 월 100 만 원 달성 가능성 검증 및 랜딩 페이지 전환 목표치 설정\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### ✍️ Writer _(Copywriter)_\n> 📋 **지시**: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: ✍️ Wr",
+      "completedAt": "2026-06-27T12:56:26.625Z"
+    },
+    {
+      "id": "20260627122309-yb4u",
+      "title": "Stripe 보안_badge_ 시각적 강조 추가",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-27T12:23:09.970Z",
+      "status": "done",
+      "sessionDir": "2026-06-27T11-23",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-27T11-23/_report.md\n- Writer: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n- 현빈: Stripe 전환 후 예상 고객 수 (LTV 기반) 계산하여 월 100 만 원 달성 가능성 검증 및 랜딩 페이지 전환 목표치 설정\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### ✍️ Writer _(Copywriter)_\n> 📋 **지시**: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: ✍️ Wr",
+      "completedAt": "2026-06-27T12:56:26.649Z"
+    },
+    {
+      "id": "20260627122309-qmw9",
+      "title": "\"7 일 환불 보장\" 문구 명시",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-27T12:23:09.984Z",
+      "status": "done",
+      "sessionDir": "2026-06-27T11-23",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-27T11-23/_report.md\n- Writer: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n- 현빈: Stripe 전환 후 예상 고객 수 (LTV 기반) 계산하여 월 100 만 원 달성 가능성 검증 및 랜딩 페이지 전환 목표치 설정\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### ✍️ Writer _(Copywriter)_\n> 📋 **지시**: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: ✍️ Wr",
+      "completedAt": "2026-06-27T12:56:26.662Z"
+    },
+    {
+      "id": "20260627122310-jlxc",
+      "title": "YouTube 쇼츠 CTR 목표 15% → A/B 테스트",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-27T12:23:10.011Z",
+      "status": "done",
+      "sessionDir": "2026-06-27T11-23",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-27T11-23/_report.md\n- Writer: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n- 현빈: Stripe 전환 후 예상 고객 수 (LTV 기반) 계산하여 월 100 만 원 달성 가능성 검증 및 랜딩 페이지 전환 목표치 설정\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### ✍️ Writer _(Copywriter)_\n> 📋 **지시**: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: ✍️ Wr",
+      "completedAt": "2026-06-27T12:56:26.675Z"
+    },
+    {
+      "id": "20260627122310-js52",
+      "title": "블로그 SEO 키워드 최적화 (중소 셀러 타겟)",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-06-27T12:23:10.023Z",
+      "status": "done",
+      "sessionDir": "2026-06-27T11-23",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-06-27T11-23/_report.md\n- Writer: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n- 현빈: Stripe 전환 후 예상 고객 수 (LTV 기반) 계산하여 월 100 만 원 달성 가능성 검증 및 랜딩 페이지 전환 목표치 설정\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### ✍️ Writer _(Copywriter)_\n> 📋 **지시**: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: ✍️ Wr",
+      "completedAt": "2026-06-27T12:56:26.686Z"
     }
   ]
 }
