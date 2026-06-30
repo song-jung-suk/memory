@@ -96,3 +96,4 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-06-26] WP CLI 명령('wp post insert') 실행 및 게시 ID 반환 후 애드센스 상태 모니터링 → 산출물 sessions/2026-06-26T11-20/developer.md
 - [2026-06-27] trend_sniper.py 시간 초과 및 GPU 메모리 부족 문제 해결 후 최신 트렌드 데이터 재수집 자동화 → 산출물 sessions/2026-06-27T00-53/developer.md
 - [2026-06-29] Stripe 결제 통합이 완료되었는지 API 테스트 실행 및 작동 여부 검증 → 산출물 sessions/2026-06-29T12-18/developer.md
+- [2026-06-29] WP CLI 명령('wp post insert') 실행 및 애드센스 승인 상태 확인, 게시 ID 반환 기능 수행 → 산출물 sessions/2026-06-29T13-17/developer.md
