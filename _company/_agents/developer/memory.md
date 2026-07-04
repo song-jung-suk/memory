@@ -99,3 +99,4 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-06-29] WP CLI 명령('wp post insert') 실행 및 애드센스 승인 상태 확인, 게시 ID 반환 기능 수행 → 산출물 sessions/2026-06-29T13-17/developer.md
 - [2026-06-30] WP CLI 명령으로 애드센스 승인 데이터 수집 완료 후, 중국 소싱 정보 자동 포스팅 시스템 로직 재검증 및 게시 ID 반환 기능 확인 → 산출물 sessions/2026-06-30T12-11/developer.md
 - [2026-07-02] WP CLI 'wp post insert' 자동화 로직 재검증, 게시 성공 시 트래픽 수집 로직 구현, Stripe 결제 API 연동 상태 지속 모니터링 스크립트 작성 → 산출물 sessions/2026-07-02T13-14/developer.md
+- [2026-07-04] auto_planner.py 코드 오류 디버깅 및 WP CLI 명령 실행 로직 복구 → 산출물 sessions/2026-07-04T08-50/developer.md
