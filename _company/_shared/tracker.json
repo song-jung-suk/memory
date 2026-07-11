@@ -1,159 +1,6 @@
 {
   "tasks": [
     {
-      "id": "20260530012857-ci2l",
-      "title": "좌우 분할 비율: 60% Chaos/Red vs 40% Order/Blue가 명확히 구분되는가?",
-      "description": "자동 등록 (Writer 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "writer"
-      ],
-      "createdAt": "2026-05-30T01:28:57.355Z",
-      "status": "done",
-      "sessionDir": "2026-05-30T01-19",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
-      "completedAt": "2026-05-30T01:34:20.419Z"
-    },
-    {
-      "id": "20260530012857-cdfv",
-      "title": "색상 대비: Red와 Blue의 대비가 시각적으로 가장 강렬하게 느껴지는가?",
-      "description": "자동 등록 (Writer 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "writer"
-      ],
-      "createdAt": "2026-05-30T01:28:57.376Z",
-      "status": "done",
-      "sessionDir": "2026-05-30T01-19",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
-      "completedAt": "2026-05-30T01:34:20.439Z"
-    },
-    {
-      "id": "20260530012857-idvm",
-      "title": "폰트 스타일: 좌측은 왜곡되거나 긴장감 있게, 우측은 구조적이고 깔끔한 산세리프체인가?",
-      "description": "자동 등록 (Writer 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "writer"
-      ],
-      "createdAt": "2026-05-30T01:28:57.388Z",
-      "status": "done",
-      "sessionDir": "2026-05-30T01-19",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
-      "completedAt": "2026-05-30T01:34:20.450Z"
-    },
-    {
-      "id": "20260530012857-aa9w",
-      "title": "핵심 메시지: 'Chaos $\\rightarrow$ Order'라는 전환의 흐름이 시각적으로 명확히 전달되는가?",
-      "description": "자동 등록 (Writer 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "writer"
-      ],
-      "createdAt": "2026-05-30T01:28:57.401Z",
-      "status": "done",
-      "sessionDir": "2026-05-30T01-19",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-05-30T01-19/_report.md\n- 영숙: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 \n- Writer: Designer에게 전달할 최종 핵심 카피를 준비하고, Designer가 이를 바탕으로 'Chaos $\rightarrow$ Order QA 프레\n- Designer: Writer로부터 최종 카피를 수신하는 즉시, 'Chaos $\rightarrow$ Order QA 프레임워크'의 원칙(Red/Blue 대비 극대\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 📱 영숙 _(비서 · Personal Assistant)_\n> 📋 **지시**: Writer와 Designer가 수행한 작업에 대해 'Chaos $\rightarrow$ Order QA 프레임워크'를 적용하여 작업의 일관성과 속도를 보장하기 위한 상세 실행 계획 초안을 작성하고, 다음 24시간 동안의 구체",
-      "completedAt": "2026-05-30T01:34:20.461Z"
-    },
-    {
-      "id": "20260531113814-6zh2",
-      "title": "`TELEGRAM_BOT_TOKEN` 입력 (BotFather 에서 발급)",
-      "description": "자동 등록 (영숙 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "secretary"
-      ],
-      "createdAt": "2026-05-31T11:38:14.868Z",
-      "status": "done",
-      "sessionDir": "2026-05-31T11-33",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-05-31T11-33/_report.md\n- 영숙: 영숙, 텔레그램으로 보낸 문화카드 확인 일정 등록해줘!\n\nCEO 종합 요점: 📱 영숙: 작업 시작합니다.\n\n---\n\n## 🔄 텔레그램 문화카드 확인 일정 등록 처리\n\n### 1️⃣ 현재 상태 체크\n\n- **텔레그램 봇 연결:** 비활성 (설정 완료 필요)  \n- **캘린더 데이터:** 구글 캘린더 연동 중 (`hanguosong@gmail.com`)\n- **문화카드 확인 요청일:** [Telegram 메시지 내용 확인 필요]\n\n",
-      "completedAt": "2026-05-31T11:38:14.909Z"
-    },
-    {
-      "id": "20260531113814-qkxw",
-      "title": "`TELEGRAM_CHAT_ID` 확인 (이미 8626439",
-      "description": "자동 등록 (영숙 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "secretary"
-      ],
-      "createdAt": "2026-05-31T11:38:14.882Z",
-      "status": "done",
-      "sessionDir": "2026-05-31T11-33",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-05-31T11-33/_report.md\n- 영숙: 영숙, 텔레그램으로 보낸 문화카드 확인 일정 등록해줘!\n\nCEO 종합 요점: 📱 영숙: 작업 시작합니다.\n\n---\n\n## 🔄 텔레그램 문화카드 확인 일정 등록 처리\n\n### 1️⃣ 현재 상태 체크\n\n- **텔레그램 봇 연결:** 비활성 (설정 완료 필요)  \n- **캘린더 데이터:** 구글 캘린더 연동 중 (`hanguosong@gmail.com`)\n- **문화카드 확인 요청일:** [Telegram 메시지 내용 확인 필요]\n\n",
-      "completedAt": "2026-05-31T11:38:14.922Z"
-    },
-    {
-      "id": "20260602231503-4nfb",
-      "title": "Business: 타겟별 전략 계획 수립",
-      "description": "자동 등록 (현빈 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "business"
-      ],
-      "createdAt": "2026-06-02T23:15:03.553Z",
-      "status": "done",
-      "sessionDir": "2026-06-02T22-29",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-06-02T22-29/_report.md\n- 현빈: 다다직구 타겟 중국 구매셀러 3곳의 초기 상담 진행: (1) 스마트스토어 운영 셀러, (2) 1688 도매 구매자, (3) 통관 경험이 없는 셀\n- Writer: 신규 거래처 발굴 전략을 반영한 인스타그램 피드 캡션 작성: 현재 2026 년 6 월, 중국 구매셀러들이 겪는 가장 큰 어려움(원산지 스티커 문\n- 레오: 신규 고객 유도용 쇼츠 기획: 첫 3 초에 '중국 사입하면 벌금 100 만 원 나옵니다!'와 같은 자극적 훅을 사용하여 시청자 호기심을 유발하고\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 💼 현빈 _(비즈니스 전략가 · Head of Business)_\n> 📋 **지시**: 다다직구 타겟 중국 구매셀러 3곳의 초기 상담 진행: (1) 스마트스토어 운영 셀러, (2) 1688 도매 구매자, (3) 통관 경험이 없는 셀러. 각 고객과의 첫 연락 시 다다직구의 주요 가치인 '단가 비교', '통",
-      "completedAt": "2026-06-03T00:01:10.685Z"
-    },
-    {
-      "id": "20260602231503-0pm9",
-      "title": "Writer: 맞춤 영업 메시지 작성 (3 버전)",
-      "description": "자동 등록 (현빈 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "business"
-      ],
-      "createdAt": "2026-06-02T23:15:03.573Z",
-      "status": "done",
-      "sessionDir": "2026-06-02T22-29",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-06-02T22-29/_report.md\n- 현빈: 다다직구 타겟 중국 구매셀러 3곳의 초기 상담 진행: (1) 스마트스토어 운영 셀러, (2) 1688 도매 구매자, (3) 통관 경험이 없는 셀\n- Writer: 신규 거래처 발굴 전략을 반영한 인스타그램 피드 캡션 작성: 현재 2026 년 6 월, 중국 구매셀러들이 겪는 가장 큰 어려움(원산지 스티커 문\n- 레오: 신규 고객 유도용 쇼츠 기획: 첫 3 초에 '중국 사입하면 벌금 100 만 원 나옵니다!'와 같은 자극적 훅을 사용하여 시청자 호기심을 유발하고\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 💼 현빈 _(비즈니스 전략가 · Head of Business)_\n> 📋 **지시**: 다다직구 타겟 중국 구매셀러 3곳의 초기 상담 진행: (1) 스마트스토어 운영 셀러, (2) 1688 도매 구매자, (3) 통관 경험이 없는 셀러. 각 고객과의 첫 연락 시 다다직구의 주요 가치인 '단가 비교', '통",
-      "completedAt": "2026-06-03T00:01:10.700Z"
-    },
-    {
-      "id": "20260602231503-nqcp",
-      "title": "Secretary: 고객 데이터 관리 체계 마련",
-      "description": "자동 등록 (현빈 산출물에서 추출)",
-      "owner": "agent",
-      "agentIds": [
-        "business"
-      ],
-      "createdAt": "2026-06-02T23:15:03.584Z",
-      "status": "done",
-      "sessionDir": "2026-06-02T22-29",
-      "nudges": 0,
-      "priority": "normal",
-      "preAlarmsSent": [],
-      "evidence": "완료: sessions/2026-06-02T22-29/_report.md\n- 현빈: 다다직구 타겟 중국 구매셀러 3곳의 초기 상담 진행: (1) 스마트스토어 운영 셀러, (2) 1688 도매 구매자, (3) 통관 경험이 없는 셀\n- Writer: 신규 거래처 발굴 전략을 반영한 인스타그램 피드 캡션 작성: 현재 2026 년 6 월, 중국 구매셀러들이 겪는 가장 큰 어려움(원산지 스티커 문\n- 레오: 신규 고객 유도용 쇼츠 기획: 첫 3 초에 '중국 사입하면 벌금 100 만 원 나옵니다!'와 같은 자극적 훅을 사용하여 시청자 호기심을 유발하고\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 💼 현빈 _(비즈니스 전략가 · Head of Business)_\n> 📋 **지시**: 다다직구 타겟 중국 구매셀러 3곳의 초기 상담 진행: (1) 스마트스토어 운영 셀러, (2) 1688 도매 구매자, (3) 통관 경험이 없는 셀러. 각 고객과의 첫 연락 시 다다직구의 주요 가치인 '단가 비교', '통",
-      "completedAt": "2026-06-03T00:01:10.713Z"
-    },
-    {
       "id": "20260606052349-bh94",
       "title": "추가 거래처 (D, E) 의 이메일 발송 실행 확인 및 보고",
       "description": "자동 등록 (현빈 산출물에서 추출)",
@@ -254,6 +101,40 @@
       "preAlarmsSent": [],
       "evidence": "완료: sessions/2026-06-27T11-23/_report.md\n- Writer: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n- 현빈: Stripe 전환 후 예상 고객 수 (LTV 기반) 계산하여 월 100 만 원 달성 가능성 검증 및 랜딩 페이지 전환 목표치 설정\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### ✍️ Writer _(Copywriter)_\n> 📋 **지시**: Stripe 결제 전환율 개선용 랜딩 페이지 카피문구 3개 생성하고, 현재 49,900 원 가격에 대한 구매 장벽 제거 문구 5 개 추가 작성\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: ✍️ Wr",
       "completedAt": "2026-06-27T12:56:26.686Z"
+    },
+    {
+      "id": "20260704101840-tpb6",
+      "title": "Stripe 전환율 데이터 수집 (stripe_ltv_calculator.py 실행)",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-07-04T10:18:40.776Z",
+      "status": "done",
+      "sessionDir": "2026-07-04T08-50",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-07-04T08-50/_report.md\n- 코다리: auto_planner.py 코드 오류 디버깅 및 WP CLI 명령 실행 로직 복구\n- 레오: AI 음성 생성을 활용한 중국 통관 벌금 쇼츠 영상 기획 및 3 초 훅 작성 브리프 요청\n- Writer: AI 음성 쇼츠 3 초 훅 강렬한 대본 초안 작성 및 영상 스크립트 구성\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 💻 코다리 _(시니어 풀스택 엔지니어)_\n> 📋 **지시**: auto_planner.py 코드 오류 디버깅 및 WP CLI 명령 실행 로직 복구\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: `auto_planner.py` 디버깅 및 WP CLI 로직 복구 분석",
+      "completedAt": "2026-07-04T10:52:05.391Z"
+    },
+    {
+      "id": "20260704101840-g7so",
+      "title": "가격 옵션 최종 확정 및 랜딩 페이지 업데이트",
+      "description": "자동 등록 (현빈 산출물에서 추출)",
+      "owner": "agent",
+      "agentIds": [
+        "business"
+      ],
+      "createdAt": "2026-07-04T10:18:40.788Z",
+      "status": "done",
+      "sessionDir": "2026-07-04T08-50",
+      "nudges": 0,
+      "priority": "normal",
+      "preAlarmsSent": [],
+      "evidence": "완료: sessions/2026-07-04T08-50/_report.md\n- 코다리: auto_planner.py 코드 오류 디버깅 및 WP CLI 명령 실행 로직 복구\n- 레오: AI 음성 생성을 활용한 중국 통관 벌금 쇼츠 영상 기획 및 3 초 훅 작성 브리프 요청\n- Writer: AI 음성 쇼츠 3 초 훅 강렬한 대본 초안 작성 및 영상 스크립트 구성\n\nCEO 종합 요점: ## 🗂 작업 라운드 — 누가 뭐 했나\n\n### 💻 코다리 _(시니어 풀스택 엔지니어)_\n> 📋 **지시**: auto_planner.py 코드 오류 디버깅 및 WP CLI 명령 실행 로직 복구\n> 🔧 **도구 실행**: _(없음 — LLM 추론만)_\n> 💡 **핵심 산출**: `auto_planner.py` 디버깅 및 WP CLI 로직 복구 분석",
+      "completedAt": "2026-07-04T10:52:05.432Z"
     }
   ]
 }
