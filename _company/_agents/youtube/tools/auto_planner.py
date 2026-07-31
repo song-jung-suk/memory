@@ -43,9 +43,9 @@ def main():
     try:
         import os as os_lib
         sub_env = dict(os_lib.environ, PYTHONIOENCODING="utf-8")
-        test_proc = subprocess.run([sys.executable, SNIPER_PATH], capture_output=True, text=True, encoding='utf-8', env=sub_env, cwd=HERE, timeout=60)
+        test_proc = subprocess.run([sys.executable, SNIPER_PATH], capture_output=True, text=True, encoding='utf-8', env=sub_env, cwd=HERE, timeout=300)
     except subprocess.TimeoutExpired:
-        print("❌ trend_sniper.py 검증 시간 초과 (60초 초과)")
+        print("❌ trend_sniper.py 검증 시간 초과 (300초 초과)")
         print("   LM Studio에서 모델이 제대로 로드(Active)되었는지, 혹은 하드웨어 응답 속도가 지연되는지 확인하세요.")
         sys.exit(1)
 
