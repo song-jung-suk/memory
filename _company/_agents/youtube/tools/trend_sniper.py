@@ -120,56 +120,78 @@ def main():
     if not model:
         try:
             if is_lm_studio:
-                # LM Studio: GET /v1/models (OpenAI 호환)
                 base = ollama_url.rstrip('/')
                 if not base.endswith('/v1'):
                     base = base + '/v1'
-                r = requests.get(f"{base}/models", timeout=5)
+                r = requests.get(f"{base}/models", timeout=3)
                 r.raise_for_status()
                 models = [m["id"] for m in r.json().get("data", [])]
             else:
-                # Ollama: GET /api/tags
-                r = requests.get(f"{ollama_url}/api/tags", timeout=5)
+                r = requests.get(f"{ollama_url}/api/tags", timeout=3)
                 r.raise_for_status()
                 models = [m["name"] for m in r.json().get("models", [])]
-            if not models:
-                print(f"❌ 로컬 LLM에 설치된 모델이 없어요. {'LM Studio' if is_lm_studio else 'Ollama'} 에서 모델 로드/풀하세요.")
-                sys.exit(1)
-            model = models[0]
-            print(f"   자동 선택 모델: {model}")
-        except Exception as e:
-            print(f"❌ 로컬 LLM 연결 실패 ({ollama_url}): {e}")
-            print(f"   엔진 실행 확인: {'LM Studio (포트 1234)' if is_lm_studio else 'Ollama (포트 11434)'}")
-            sys.exit(1)
+            if models:
+                model = models[0]
+                print(f"   자동 선택 모델: {model}")
+        except Exception:
+            print("⚠️ 로컬 LLM 서버 미응답 -> 백업 처리 모드로 진입")
 
-    # 추론 호출 — 엔진별 다른 endpoint·payload 형식
-    try:
-        if is_lm_studio:
-            base = ollama_url.rstrip('/')
-            if not base.endswith('/v1'):
-                base = base + '/v1'
-            r = requests.post(
-                f"{base}/chat/completions",
-                json={
-                    "model": model,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "stream": False,
-                    "max_tokens": 1024,
-                },
-                timeout=300,
-            )
-            r.raise_for_status()
-            report = r.json().get("choices", [{}])[0].get("message", {}).get("content", "").strip()
-        else:
-            r = requests.post(
-                f"{ollama_url}/api/generate",
-                json={"model": model, "prompt": prompt, "stream": False},
-                timeout=300,
-            )
-            r.raise_for_status()
-            report = r.json().get("response", "").strip()
-    except Exception as e:
-        print(f"❌ LLM 호출 실패: {e}")
+    # 1. 로컬 LLM 호출 시도
+    report = ""
+    if model:
+        try:
+            if is_lm_studio:
+                base = ollama_url.rstrip('/')
+                if not base.endswith('/v1'):
+                    base = base + '/v1'
+                r = requests.post(
+                    f"{base}/chat/completions",
+                    json={
+                        "model": model,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "stream": False,
+                        "max_tokens": 1024,
+                    },
+                    timeout=3,
+                )
+                r.raise_for_status()
+                report = r.json().get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+            else:
+                r = requests.post(
+                    f"{ollama_url}/api/generate",
+                    json={"model": model, "prompt": prompt, "stream": False},
+                    timeout=3,
+                )
+                r.raise_for_status()
+                report = r.json().get("response", "").strip()
+        except Exception as e:
+            print(f"⚠️ 로컬 LLM 호출 미연결/실패 ({e}) -> 백업 처리 진행")
+
+    # 2. 로컬 LLM 미연결 시 Gemini API 백업 생성
+    if not report:
+        dev_cfg_path = os.path.abspath(os.path.join(HERE, "..", "..", "developer", "config.md"))
+        gemini_key = acct.get("GEMINI_API_KEY") or os.environ.get("GEMINI_API_KEY")
+        if not gemini_key and os.path.exists(dev_cfg_path):
+            try:
+                with open(dev_cfg_path, "r", encoding="utf-8") as f:
+                    m = re.search(r"-\s*GEMINI_API_KEY\s*:\s*[\"']?(.*?)[\"']?\s*$", f.read(), re.M)
+                    if m: gemini_key = m.group(1).strip().strip('"').strip("'")
+            except Exception: pass
+        if gemini_key:
+            try:
+                import urllib.request
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={gemini_key}"
+                payload = {"contents": [{"parts": [{"text": prompt}]}]}
+                req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
+                with urllib.request.urlopen(req, timeout=20) as res:
+                    res_data = json.loads(res.read().decode('utf-8'))
+                    report = res_data['candidates'][0]['content']['parts'][0]['text'].strip()
+                    print("🌐 [백업 Gemini API로 트렌드 분석 완료]")
+            except Exception as ge:
+                print(f"❌ 백업 Gemini API도 실패: {ge}")
+
+    if not report:
+        print("❌ 보고서 생성 실패")
         sys.exit(1)
 
     print("\n" + "="*60)

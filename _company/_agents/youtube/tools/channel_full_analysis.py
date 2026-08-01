@@ -5,7 +5,12 @@ Input: just YOUTUBE_API_KEY + MY_CHANNEL_ID/HANDLE from youtube_account.json.
 No additional config needed. Output: full report with stats, patterns, and
 data-driven recommendations.
 """
-import os, json, sys, time, datetime, statistics, re
+import os, json, sys, time, datetime, statistics, re, io
+
+# Windows 콘솔 인코딩 방지
+if sys.platform.startswith('win'):
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))

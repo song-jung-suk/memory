@@ -259,6 +259,7 @@ def main():
                             "🤖 <b>다다직구 마케팅 원격 비서 봇 도움말</b>\n\n"
                             "📢 <b>사용 가능한 명령어:</b>\n"
                             "👉 <code>/run</code> 또는 <code>실행</code> : 다다직구 자동화 파이프라인 즉시 구동 및 메일 전송\n"
+                            "👉 <code>/추천 [상품명]</code> : 쿠팡/알리 3-트랙 원고 (쇼츠/인스타/블로그) 자동 생성\n"
                             "👉 <code>/status</code> : 현재 파이프라인 가동 상태 조회\n"
                             "👉 <code>/help</code> : 도움말 안내"
                         )
@@ -284,6 +285,19 @@ def main():
                         worker_thread.daemon = True
                         worker_thread.start()
                         
+                    elif cmd_clean.startswith("추천") or cmd_clean.startswith("affiliate") or cmd_clean.startswith("소싱"):
+                        keyword = msg_text.replace("/추천", "").replace("/affiliate", "").replace("추천", "").strip()
+                        if not keyword:
+                            keyword = "알리익스프레스 가성비 소싱 추천 템"
+                        send_telegram_message(token, chat_id, f"🛍️ <b>'{keyword}'</b> 기반으로 쇼츠, 인스타, 블로그 3-트랙 원고 생성을 시작합니다...")
+                        
+                        def run_affiliate_job(kw):
+                            aff_cmd = [PYTHON_EXECUTABLE, "-u", r"E:\work\agents\developer\affiliate_pipeline.py", kw]
+                            subprocess.run(aff_cmd, capture_output=True, text=True, encoding='utf-8', errors='ignore')
+                            
+                        t = threading.Thread(target=run_affiliate_job, args=(keyword,))
+                        t.daemon = True
+                        t.start()
                     elif cmd_clean in ["status", "상태"]:
                         with pipeline_lock:
                             status_str = "🏃 <b>작업 중 (Running)</b>" if is_pipeline_running else "💤 <b>대기 중 (Idle)</b>"
