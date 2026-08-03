@@ -161,67 +161,146 @@ def main():
             send_telegram_notification(tg_token, tg_chat, f"🚨 *Instagram 업로드 에러*\n- 이미지: `{os.path.basename(image_path)}`\n- 에러: 이미지 임시 업로드 중 오류 발생\n`{e}`")
         sys.exit(1)
 
-    print("Step 2. Meta Graph API를 사용하여 미디어 컨테이너를 생성합니다...")
-    version = "v23.0"
-    base_url = f"https://graph.instagram.com/{version}/{business_id}"
-    creation_id = ""
-    try:
-        r = requests.post(f"{base_url}/media", data={
-            "image_url": public_url,
+class InstaUploader:
+    """Instagram Graph API v23.0 Upload Engine & Constraints Monitor"""
+    def __init__(self, account_id, access_token):
+        self.acc_id = account_id
+        self.token = access_token
+        self.version = "v23.0"
+        self.base_url = f"https://graph.instagram.com/{self.version}/{self.acc_id}"
+
+    def upload_image(self, image_url, caption=""):
+        # 1. 미디어 컨테이너 생성
+        r = requests.post(f"{self.base_url}/media", data={
+            "image_url": image_url,
             "caption": caption,
-            "access_token": token
+            "access_token": self.token
         }, timeout=30)
-        res_data = r.json()
-        creation_id = res_data.get("id")
+        res = r.json()
         
+        if "error" in res:
+            error_info = res["error"]
+            raise RuntimeError(f"[Code {error_info.get('code')}] {error_info.get('message')}")
+            
+        creation_id = res.get("id")
         if not creation_id:
-            raise ValueError(f"ID를 얻지 못했습니다. API 응답: {res_data}")
-        print(f"  컨테이너 생성 완료! (ID: {creation_id})")
-    except Exception as e:
-        err_msg = f"❌ Instagram 컨테이너 생성 오류: {e}"
-        print(err_msg)
-        if post["TELEGRAM_NOTIFY"]:
-            send_telegram_notification(tg_token, tg_chat, f"🚨 *Instagram 업로드 에러*\n- 이미지: `{os.path.basename(image_path)}`\n- 에러: 미디어 컨테이너 생성 실패\n`{e}`")
+            raise ValueError(f"컨테이너 ID를 얻지 못했습니다. API 응답: {res}")
+            
+        print(f"⏳ 인스타그램 서버 미디어 처리 대기 중... (Creation ID: {creation_id})")
+        time.sleep(30)
+
+        # 2. 최종 발행 (Publish container)
+        publish_r = requests.post(f"{self.base_url}/media_publish", data={
+            "creation_id": creation_id,
+            "access_token": self.token
+        }, timeout=30)
+        publish_res = publish_r.json()
+        
+        if "error" in publish_res:
+            error_info = publish_res["error"]
+            raise RuntimeError(f"[Publish Code {error_info.get('code')}] {error_info.get('message')}")
+            
+        post_id = publish_res.get("id")
+        if not post_id:
+            raise ValueError(f"최종 발행 실패. API 응답: {publish_res}")
+            
+        return post_id
+
+def main():
+    parser = argparse.ArgumentParser(description="Instagram Feed Poster Tool")
+    parser.add_argument("--preview", action="store_true", help="Run in preview simulation mode")
+    parser.add_argument("--image", type=str, help="Override image path or public URL")
+    parser.add_argument("--caption", type=str, help="Override caption")
+    args = parser.parse_args()
+
+    # Load configurations
+    acct = load_account_config()
+    post = load_poster_config()
+
+    # Apply overrides
+    image_path = args.image if args.image else post["IMAGE_PATH"]
+    caption = args.caption if args.caption else post["CAPTION"]
+    preview = args.preview or post["PREVIEW"]
+    
+    token = acct["META_ACCESS_TOKEN"]
+    business_id = acct["INSTAGRAM_BUSINESS_ID"]
+
+    # 보안 수칙: 콘솔 출력 시 토큰 마스킹
+    masked_token = (token[:8] + "…" + token[-8:]) if len(token) >= 16 else "(설정안됨)"
+    print("─── 📷 Instagram 자동 업로드 엔진 (v23.0) ───")
+    print(f"  Business ID: {business_id or '(지정안됨)'}")
+    print(f"  Token      : {masked_token}")
+    print(f"  이미지     : {image_path or '(지정안됨)'}")
+    print(f"  캡션 길이  : {len(caption)}자")
+    print()
+
+    # Check basic inputs
+    if not image_path:
+        print("❌ 오류: 업로드할 이미지 경로 또는 공개 URL이 지정되지 않았습니다.")
         sys.exit(1)
 
-    print("Step 3. Instagram 서버 미디어 처리를 대기합니다 (30초)...")
-    time.sleep(30)
+    tg_token, tg_chat = resolve_telegram()
 
-    print("Step 4. 미디어를 최종 발행합니다...")
+    if preview:
+        print("=== [미리보기 시뮬레이션] ===")
+        print("1. 공개 URL 검증")
+        print("2. InstaUploader 미디어 컨테이너 생성 시뮬레이션 (v23.0 API)")
+        print("3. 대기 후 퍼블리시 발행 시뮬레이션")
+        print("\n[캡션 내용]")
+        print(caption)
+        print("\n✅ 시뮬레이션 완료.")
+        return
+
+    if not token or not business_id:
+        print("❌ 오류: 계정 연동 설정이 불완전합니다. instagram_account 도구를 실행해 주세요.")
+        sys.exit(1)
+
+    # 1. 미디어 URL 준비 (로컬 파일인 경우 catbox.moe에 공개 URL 생성, 이미 HTTP URL이면 바로 사용)
+    public_url = ""
+    if image_path.startswith("http://") or image_path.startswith("https://"):
+        public_url = image_path
+        print(f"Step 1. 공개 URL 감지 완료: {public_url}")
+    else:
+        if not os.path.exists(image_path):
+            print(f"❌ 오류: 이미지 파일을 찾을 수 없습니다: {image_path}")
+            sys.exit(1)
+        print("Step 1. 로컬 이미지를 공개 서버에 임시 업로드합니다 (catbox.moe)...")
+        try:
+            with open(image_path, "rb") as f:
+                files = {
+                    "reqtype": (None, "fileupload"),
+                    "fileToUpload": (os.path.basename(image_path), f, "image/png"),
+                }
+                res = requests.post("https://catbox.moe/user/api.php", files=files, timeout=30)
+                res.raise_for_status()
+                public_url = res.text.strip()
+                print(f"  공개 URL 획득 완료: {public_url}")
+        except Exception as e:
+            err_msg = f"❌ 이미지 서버 업로드 실패: {e}"
+            print(err_msg)
+            if post["TELEGRAM_NOTIFY"]:
+                send_telegram_notification(tg_token, tg_chat, f"🚨 *Instagram 업로드 에러*\n- 에러: 이미지 임시 업로드 중 오류 발생\n`{e}`")
+            sys.exit(1)
+
+    # 2. InstaUploader 업로드 객체 생성 및 실행
+    print("Step 2. InstaUploader를 통해 미디어 컨테이너 생성 및 최종 발행 진행 중...")
+    uploader = InstaUploader(account_id=business_id, access_token=token)
     try:
-        r_pub = requests.post(f"{base_url}/media_publish", data={
-            "creation_id": creation_id,
-            "access_token": token
-        }, timeout=30)
-        res_pub = r_pub.json()
-        post_id = res_pub.get("id")
-        
-        if not post_id:
-            raise ValueError(f"발행 실패. API 응답: {res_pub}")
-            
+        post_id = uploader.upload_image(image_url=public_url, caption=caption)
         success_msg = f"🌟 Instagram 피드 게시 성공! (Post ID: {post_id})"
         print(success_msg)
-        
-        # Log to activity log
-        log_file = os.path.join(os.path.dirname(HERE), "activity.log")
-        try:
-            with open(log_file, "a", encoding="utf-8") as lf:
-                lf.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] Pushed Instagram post {post_id} with image {os.path.basename(image_path)}\n")
-        except Exception:
-            pass
 
         if post["TELEGRAM_NOTIFY"]:
             send_telegram_notification(
                 tg_token,
                 tg_chat,
-                f"✅ *Instagram 게시 성공!*\n- 이미지: `{os.path.basename(image_path)}`\n- 포스트 ID: `{post_id}`\n- 내용: {caption[:50]}..."
+                f"✅ *Instagram 게시 성공!*\n- 포스트 ID: `{post_id}`\n- 내용: {caption[:50]}..."
             )
-            
     except Exception as e:
-        err_msg = f"❌ Instagram 최종 발행 오류: {e}"
+        err_msg = f"❌ Instagram 업로드 오류: {e}"
         print(err_msg)
         if post["TELEGRAM_NOTIFY"]:
-            send_telegram_notification(tg_token, tg_chat, f"🚨 *Instagram 발행 에러*\n- 이미지: `{os.path.basename(image_path)}`\n- 에러: 최종 발행(Publish) 중 실패\n`{e}`")
+            send_telegram_notification(tg_token, tg_chat, f"🚨 *Instagram 업로드 실패*\n`{e}`")
         sys.exit(1)
 
 if __name__ == "__main__":

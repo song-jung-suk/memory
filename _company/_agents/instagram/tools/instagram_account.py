@@ -36,8 +36,8 @@ def load_config():
             try:
                 with open(CONFIG_MD_PATH, "r", encoding="utf-8") as f:
                     content = f.read()
-                m_token = re.search(r"META_ACCESS_TOKEN\s*[:：=]\s*([A-Za-z0-9_\-]+)", content)
-                m_id = re.search(r"INSTAGRAM_BUSINESS_ID\s*[:：=]\s*([A-Za-z0-9_\-]+)", content)
+                m_token = re.search(r"META_ACCESS_TOKEN\s*[:：=]\s*(\S+)", content)
+                m_id = re.search(r"INSTAGRAM_BUSINESS_ID\s*[:：=]\s*(\S+)", content)
                 if m_token and not token:
                     token = m_token.group(1).strip()
                 if m_id and not business_id:
