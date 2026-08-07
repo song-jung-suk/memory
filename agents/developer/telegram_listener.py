@@ -178,6 +178,14 @@ def run_pipeline_worker(token, chat_id):
                 f"💾 <b>로컬 백업:</b> 세션 디렉토리에 마크다운 리포트 저장 완료."
             )
             send_telegram_message(token, chat_id, report)
+            
+            # E:\work\sessions 디렉토리에 산출물 및 텔레그램 리포트 자동 보관
+            try:
+                sys.path.append(r"E:\work\agents")
+                from session_logger import save_session_artifact
+                save_session_artifact("telegram_listener", "pipeline_execution_log.md", stdout_full)
+            except Exception as se:
+                print(f"⚠️ 세션 저장 중 오류 발생: {se}")
         else:
             error_msg = f"❌ <b>마케팅 파이프라인 구동 실패!</b> (Exit Code: {return_code})\n\n"
             if stderr_full:

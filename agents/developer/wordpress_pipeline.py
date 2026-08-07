@@ -370,16 +370,14 @@ def main():
     subject = f"[다다직구 자동화] '{post['title']}' 기반 인스타 & 쇼츠 마케팅 기획서"
     success = send_email(subject, content_report, config)
     
-    if success:
-        # 결과를 로컬 sessions 폴더에도 기록해둡니다.
-        import datetime
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
-        session_dir = f"E:\\work\\sessions\\{timestamp}"
-        os.makedirs(session_dir, exist_ok=True)
-        report_file = os.path.join(session_dir, "marketing_report.md")
-        with open(report_file, "w", encoding="utf-8") as f:
-            f.write(content_report)
-        print(f"💾 로컬 세션 파일로도 저장 완료: {report_file}")
+    if success or content_report:
+        # 결과를 로컬 sessions 폴더에도 자동 저장/보관합니다.
+        try:
+            sys.path.append(r"E:\work\agents")
+            from session_logger import save_session_artifact
+            save_session_artifact("wordpress", "marketing_report.md", content_report)
+        except Exception as se:
+            print(f"⚠️ 세션 저장 중 오류 발생: {se}")
         
 if __name__ == "__main__":
     main()

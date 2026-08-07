@@ -233,6 +233,14 @@ def main():
     subject = f"🛍️ [Connect AI] 어필리에이트 3-트랙 마케팅 원고 보고서 ({keyword})"
     send_email_report(sender_email, app_password, receiver_email, subject, content)
     
+    # E:\work\sessions 디렉토리에 산출물 자동 보관
+    try:
+        sys.path.append(r"E:\work\agents")
+        from session_logger import save_session_artifact
+        save_session_artifact("affiliate", f"affiliate_content_{keyword}.md", content)
+    except Exception as se:
+        print(f"⚠️ 세션 저장 중 오류 발생: {se}")
+
     # 텔레그램으로도 수신 요약 알림 전송 (선택 사항)
     if token and chat_id:
         send_telegram_message(token, chat_id, f"📧 <b>'{keyword}' 어필리에이트 마케팅 원고가 이메일({receiver_email})로 전송되었습니다.</b>\n수신함을 확인해 보세요!")

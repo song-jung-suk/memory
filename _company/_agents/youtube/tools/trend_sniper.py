@@ -206,5 +206,14 @@ def main():
         f.write("\n\n---\n")
     print(f"\n✅ 보고서 저장: {REPORT_PATH}")
 
+    # E:\work\sessions 디렉토리에 산출물 자동 보관
+    try:
+        sys.path.append(r"E:\work\agents")
+        from session_logger import save_session_artifact
+        session_content = f"# 🎯 트렌드 스나이핑 보고서 — {time.strftime('%Y-%m-%d %H:%M:%S')}\n## 📡 키워드: {', '.join(chosen)}\n\n{report}"
+        save_session_artifact("youtube", "trend_sniper_report.md", session_content)
+    except Exception as se:
+        print(f"⚠️ 세션 저장 중 오류 발생: {se}")
+
 if __name__ == "__main__":
     main()
