@@ -106,3 +106,4 @@ _코다리 에이전트만 읽고 쓰는 개인 노트. 학습·교훈·자주 �
 - [2026-08-03] Stripe Dashboard 로 실제 결제 완료 건수 및 전환율 데이터 수집 스크립트 최종 배포 — PayPal API 설정 완료 확인 전 거래 분석 불가 → 자격증명 부족으로 차단됨
 - [2026-08-04] Stripe Dashboard 데이터를 기반으로 자동화된 매출 추적 스크립트 배포 및 PayPal 설정 검증 → 산출물 sessions/2026-08-04T09-11/developer.md
 - [2026-08-07] LLM 교육 패키지 출시를 위한 기술 인프라 점검: 현재 Ollama/LM Studio 서버 상태 확인, API 연동 가능한 모델 목록 생성 및 테스트용 스크립트 예제 제공 → 산출물 sessions/2026-08-07T12-30/developer.md
+- [2026-08-08] Telegram Bot 코드 배포 및 연동: Python 스크립트를 사용하여 TelegramBot API 와 Stripe 데이터 연동 구현, 매일 20:00 에 CEO 대시보드 리포트 자동 전송 기능 테스트 완료 → 산출물 sessions/2026-08-08T04-49/developer.md
