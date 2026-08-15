@@ -1,5 +1,5 @@
 # 📋 통합 스케줄
-_업데이트: 2026. 8. 15. 오전 10:58:14_
+_업데이트: 2026. 8. 15. 오후 3:13:58_
 
 ## 📅 사람 일정 (Google Calendar)
 - **2026-08-08** · 양곡신청입금2
@@ -18,17 +18,17 @@ _업데이트: 2026. 8. 15. 오전 10:58:14_
 - [2026-08-11]  Yesterday's video engagement metrics(CTR, avg watch time)를 분석하여 개선점 정리 → 산출물 sessions/2026-08-11T12-48/youtube.md
 - [2026-08-15] 8월 14일 완성된 성경구절·AI·경제 쇼츠 대본 3 개의 CTR 데이터 기반 최적화 검토 및 다음 영상에 적용할 후크/시청 지속 시간 개선 포인트 정리 → 산출물 sessions/2026-08-15T00-59/youtube.md
 ### 📷 Instagram
-- [2026-08-14] @dadajikgu 계정 최근 3일 릴스 조회수·링크 클릭률(CTR) 데이터 수집 및 다음 숏폼 CTA 버튼 텍스트 최적화 브리프 작성 → 산출물 sessions/2026-08-14T13-20/instagram.md
 - [2026-08-15] YouTube Shorts 콘텐츠와 동일한 원소스를 활용한 Instagram 릴스/피드 버전 제작 브리프 작성 (카드뉴스·CTA 버튼 텍스트 최적화 포함) → 산출물 sessions/2026-08-15T00-59/instagram.md
 - [2026-08-15] @dadajikgu 계정 최근 7일 릴스 조회수·링크 클릭률(CTR)·참여율 데이터를 가져와 다음 3개 숏폼 게시물의 CTA 버튼 텍스트, 해시태그 최적 → 산출물 sessions/2026-08-15T01-49/instagram.md
+- [2026-08-15] @dadajikgu 계정 최근 7일 릴스 조회수·링크 클릭률(CTR) 데이터를 가져와 다음 3개 숏폼 게시물의 CTA 버튼 텍스트, 해시태그 최적 브리프 작성 → 산출물 sessions/2026-08-15T04-19/instagram.md
 ### 🎨 Designer
-- [2026-07-02] 블로그 게시글과 쇼츠 영상 썸네일 통일된 Red/Red-Grey 컬러 팔레트 적용, 브랜드 가이드에 맞춰 1080x1920 비율로 썸네일 시각 가이드 및 웹 페이지 CTA 버튼 디자인 제공 → 산출물 sessions/2026-07-02T13-14/designer.md
 - [2026-07-22] 블로그 포스팅 썸네일 디자인 및 CTA 버튼 레드 톤 적용 (1080x1920 비율) → 산출물 sessions/2026-07-22T11-59/designer.md
 - [2026-07-29] 위 제목과 썸네일 컨셉을 바탕으로 A/B 테스트용 디자인 브리프 작성 (컬러/타이포/이미지 구성) → 산출물 sessions/2026-07-29T06-55/designer.md
+- [2026-08-15] 블로그 및 인스타그램 통일된 Red/Red-Grey 컬러 팔레트 적용, 브랜드 가이드에 맞춰 1080x1920 비율로 썸네일·CTA 버튼 시각 가이드 업데이트 → 산출물 sessions/2026-08-15T04-19/designer.md
 ### 💻 코다리
-- [2026-08-04] Stripe Dashboard 데이터를 기반으로 자동화된 매출 추적 스크립트 배포 및 PayPal 설정 검증 → 산출물 sessions/2026-08-04T09-11/developer.md
 - [2026-08-07] LLM 교육 패키지 출시를 위한 기술 인프라 점검: 현재 Ollama/LM Studio 서버 상태 확인, API 연동 가능한 모델 목록 생성 및 테스트용 스크립트 예제 제공 → 산출물 sessions/2026-08-07T12-30/developer.md
 - [2026-08-08] Telegram Bot 코드 배포 및 연동: Python 스크립트를 사용하여 TelegramBot API 와 Stripe 데이터 연동 구현, 매일 20:00 에 CEO 대시보드 리포트 자동 전송 기능 테스트 완료 → 산출물 sessions/2026-08-08T04-49/developer.md
+- [2026-08-15] PayPal API 설정 완료 확인 후, 최근 7일 결제 데이터(Stripe/PayPal)를 실시간으로 수집하고 전환율 기반 보고서 생성 → 산출물 sessions/2026-08-15T06-04/developer.md
 ### 💼 현빈
 - [2026-08-06] Stripe 연동 완료된 최근 7일 결제 데이터 기반 월 100만 원 달성 액션 플랜 수립 및 실행 가능성 평가 보고서 생성 → 산출물 sessions/2026-08-06T12-00/business.md
 - [2026-08-09] Stripe 전환율 데이터 기반 AI 툴 monetization 액션 플랜 수립 및 실행 가능성 평가: 월 100만 원 달성을 위한 구체적 전략 제안 → 산출물 sessions/2026-08-09T08-04/business.md
